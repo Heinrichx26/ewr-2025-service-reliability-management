@@ -635,7 +635,7 @@ def write_policy_tables(
         "\\begin{table}[!htbp]",
         "\\centering",
         "\\small",
-        "\\caption{Monthly passenger and seat exposure around the capacity intervention}",
+        "\\caption{Monthly domestic passenger and seat exposure}",
         "\\label{tab:t100-exposure}",
         "\\begin{tabular}{@{}lrrrr@{}}",
         "\\toprule",

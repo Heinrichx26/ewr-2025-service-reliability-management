@@ -16,8 +16,11 @@ RESULT_DIR = PROJECT_ROOT / "results" / "ewr_2025_full"
 DID_DIR = PROJECT_ROOT / "results" / "did_robustness"
 CAL_PLACEBO_DIR = PROJECT_ROOT / "results" / "calendar_placebo_2024"
 TRA_DIR = PROJECT_ROOT / "results" / "tra_policy_experiments"
-FIGURE_DIR = PROJECT_ROOT / "article" / "elsarticle" / "figures"
+DEEP_DIR = PROJECT_ROOT / "results" / "tra_deep_policy_checks"
+INTL_DIR = PROJECT_ROOT / "results" / "tra_t100_international_exposure"
+ARTICLE_FIGURE_DIR = PROJECT_ROOT / "article" / "elsarticle" / "figures"
 PREVIEW_DIR = PROJECT_ROOT / "results" / "figure_previews"
+FIGURE_DIR = ARTICLE_FIGURE_DIR if ARTICLE_FIGURE_DIR.exists() else PREVIEW_DIR
 
 
 PERIODS = [
@@ -109,6 +112,63 @@ def make_daily_event_figure(daily: pd.DataFrame) -> None:
     save_figure(fig, "fig_ewr_daily_event")
 
 
+def make_dynamic_event_study_figure(dynamic: pd.DataFrame) -> None:
+    specs = [
+        ("scheduled_ops", "(a)Scheduled operations", "flights/day"),
+        ("cancel_rate", "(b)Cancellation rate", "percentage points"),
+        ("delay15_rate", "(c)Delay-15-plus rate", "percentage points"),
+        ("nas_delay_per_scheduled_op", "(d)NAS delay", "min/scheduled op"),
+    ]
+    side_style = {
+        "arr": ("Arrivals", "#2563EB", "-"),
+        "dep": ("Departures", "#047857", "--"),
+    }
+    fig, axes = plt.subplots(4, 1, figsize=(7.2, 7.6), sharex=True)
+    for ax, (metric, title, ylabel) in zip(axes, specs):
+        data = dynamic[dynamic["metric"] == metric].copy()
+        for side, (label, color, linestyle) in side_style.items():
+            side_data = data[data["side"] == side].sort_values("FlightDate")
+            ax.plot(
+                side_data["FlightDate"],
+                side_data["dynamic_contrast_scaled"],
+                color=color,
+                linewidth=0.8,
+                alpha=0.22,
+            )
+            ax.plot(
+                side_data["FlightDate"],
+                side_data["dynamic_contrast_scaled"].rolling(5, center=True, min_periods=1).mean(),
+                color=color,
+                linewidth=1.35,
+                linestyle=linestyle,
+                label=label,
+            )
+        ax.axhline(0, color="#111827", linewidth=0.75)
+        ax.axvline(pd.Timestamp("2025-04-15"), color="#B91C1C", linewidth=0.95, linestyle="--")
+        ax.axvline(pd.Timestamp("2025-05-20"), color="#047857", linewidth=0.95, linestyle="--")
+        ax.axvspan(pd.Timestamp("2025-04-15"), pd.Timestamp("2025-05-19"), color="#B91C1C", alpha=0.06, linewidth=0)
+        ax.axvspan(pd.Timestamp("2025-05-20"), pd.Timestamp("2025-06-15"), color="#047857", alpha=0.06, linewidth=0)
+        ax.set_title(title, loc="center", pad=4)
+        ax.set_ylabel(ylabel)
+    axes[-1].xaxis.set_major_locator(mdates.WeekdayLocator(interval=2))
+    axes[-1].xaxis.set_major_formatter(mdates.DateFormatter("%b %d"))
+    axes[-1].set_xlabel("2025")
+    fig.legend(
+        handles=[
+            Line2D([0], [0], color="#2563EB", lw=1.35, label="Arrivals"),
+            Line2D([0], [0], color="#047857", lw=1.35, linestyle="--", label="Departures"),
+            Line2D([0], [0], color="#B91C1C", lw=0.95, linestyle="--", label="Apr 15"),
+            Line2D([0], [0], color="#047857", lw=0.95, linestyle="--", label="May 20"),
+        ],
+        ncol=4,
+        frameon=False,
+        loc="lower center",
+        bbox_to_anchor=(0.5, 0.02),
+    )
+    fig.tight_layout(rect=[0, 0.10, 1, 1])
+    save_figure(fig, "fig_dynamic_event_study")
+
+
 def make_synthetic_figure(paths: pd.DataFrame, summary: pd.DataFrame) -> None:
     specs = [
         ("arr", "delay15_rate", "(a)Arrival delay-15-plus rate", "%", 100.0),
@@ -156,69 +216,95 @@ def make_synthetic_figure(paths: pd.DataFrame, summary: pd.DataFrame) -> None:
     save_figure(fig, "fig_synthetic_reliability")
 
 
-def make_access_exposure_figure(t100_summary: pd.DataFrame, carrier_summary: pd.DataFrame, externality: pd.DataFrame) -> None:
-    fig, axes = plt.subplots(1, 3, figsize=(7.4, 3.4))
+def make_access_exposure_figure(
+    t100_summary: pd.DataFrame,
+    carrier_summary: pd.DataFrame,
+    international_summary: pd.DataFrame,
+    international_carrier: pd.DataFrame,
+    externality: pd.DataFrame,
+) -> None:
     side_labels = {"arr": "Arrivals", "dep": "Departures"}
     colors = {"arr": "#2563EB", "dep": "#047857", "United": "#7C3AED", "Other carriers": "#6B7280"}
 
-    ax = axes[0]
-    width = 0.32
-    x = np.arange(2)
-    for i, side in enumerate(["arr", "dep"]):
-        row = t100_summary[t100_summary["side"] == side].iloc[0]
-        vals = [row["seat_retention_apr_to_jun"] * 100, row["passenger_retention_apr_to_jun"] * 100]
-        pos = x + (i - 0.5) * width
-        ax.bar(pos, vals, width=width, color=colors[side], label=side_labels[side])
-        for p, v in zip(pos, vals):
-            ax.text(p, v + 1.2, f"{v:.1f}", ha="center", va="bottom", fontsize=7.5)
-    ax.set_xticks(x)
-    ax.set_xticklabels(["Seats", "Passengers"])
-    ax.set_ylim(0, 112)
-    ax.set_ylabel("April-to-June retention (%)")
-    ax.set_title("(a)Monthly exposure", loc="center")
+    def exposure_panel(ax: plt.Axes, summary: pd.DataFrame, title: str, upper: float | None = None) -> None:
+        width = 0.32
+        x = np.arange(2)
+        max_val = 0.0
+        for i, side in enumerate(["arr", "dep"]):
+            row = summary[summary["side"] == side].iloc[0]
+            vals = [row["seat_retention_apr_to_jun"] * 100, row["passenger_retention_apr_to_jun"] * 100]
+            max_val = max(max_val, max(vals))
+            pos = x + (i - 0.5) * width
+            ax.bar(pos, vals, width=width, color=colors[side], label=side_labels[side])
+            for p, v in zip(pos, vals):
+                ax.text(p, v + 1.0, f"{v:.1f}", ha="center", va="bottom", fontsize=7.2)
+        ax.set_xticks(x)
+        ax.set_xticklabels(["Seats", "Passengers"])
+        ax.set_ylim(0, upper if upper else max_val + 13)
+        ax.set_ylabel("April-to-June retention (%)")
+        ax.set_title(title, loc="center", pad=4)
 
-    ax = axes[1]
-    route_vals = []
-    for side in ["arr", "dep"]:
-        row = t100_summary[t100_summary["side"] == side].iloc[0]
-        route_vals.append(row["route_retention_apr_to_jun"] * 100)
-    ax.bar([0, 1], route_vals, color=[colors["arr"], colors["dep"]], width=0.55)
-    for p, v in zip([0, 1], route_vals):
-        ax.text(p, v + 1.2, f"{v:.1f}", ha="center", va="bottom", fontsize=7.5)
-    ax.set_xticks([0, 1])
-    ax.set_xticklabels(["Arrivals", "Departures"])
-    ax.set_ylim(0, max(route_vals) + 14)
-    ax.set_ylabel("April-to-June route ratio (%)")
-    ax.set_title("(b)Route access", loc="center")
+    def route_panel(ax: plt.Axes, summary: pd.DataFrame, title: str) -> None:
+        vals = []
+        for side in ["arr", "dep"]:
+            row = summary[summary["side"] == side].iloc[0]
+            vals.append(row["route_retention_apr_to_jun"] * 100)
+        ax.bar([0, 1], vals, color=[colors["arr"], colors["dep"]], width=0.55)
+        for p, v in zip([0, 1], vals):
+            ax.text(p, v + 1.0, f"{v:.1f}", ha="center", va="bottom", fontsize=7.2)
+        ax.set_xticks([0, 1])
+        ax.set_xticklabels(["Arrivals", "Departures"])
+        ax.set_ylim(0, max(vals) + 14)
+        ax.set_ylabel("Route ratio (%)")
+        ax.set_title(title, loc="center", pad=4)
 
-    ax = axes[2]
-    pivot = carrier_summary.pivot_table(
-        index="carrier_group",
-        columns="side",
-        values="seat_change_apr_to_jun",
-        aggfunc="first",
-    ).reindex(["United", "Other carriers"])
-    x = np.arange(len(pivot.index))
-    for i, side in enumerate(["arr", "dep"]):
-        vals = pivot[side].to_numpy()
-        pos = x + (i - 0.5) * width
-        ax.bar(pos, vals / 1000, width=width, color=colors[side], label=side_labels[side])
-        for p, v in zip(pos, vals / 1000):
-            if v < 0:
-                ax.text(p, v * 0.52, f"{v:.1f}", ha="center", va="center", fontsize=7.5, rotation=90, color="white")
-            else:
-                ax.text(p, v + 2.0, f"{v:.1f}", ha="center", va="bottom", fontsize=7.5)
-    ax.axhline(0, color="#111827", linewidth=0.8)
-    ax.set_xticks(x)
-    ax.set_xticklabels(["United", "Other"])
-    ax.set_ylim(-145, 55)
-    ax.set_ylabel("Seat change (thousand)")
-    ax.set_title("(c)Carrier burden", loc="center")
+    def carrier_panel(ax: plt.Axes, carrier: pd.DataFrame, title: str) -> None:
+        width = 0.32
+        pivot = carrier.pivot_table(
+            index="carrier_group",
+            columns="side",
+            values="seat_change_apr_to_jun",
+            aggfunc="first",
+        ).reindex(["United", "Other carriers"])
+        x = np.arange(len(pivot.index))
+        vals_all = []
+        for i, side in enumerate(["arr", "dep"]):
+            vals = pivot[side].to_numpy(dtype=float) / 1000
+            vals_all.extend(vals.tolist())
+            pos = x + (i - 0.5) * width
+            ax.bar(pos, vals, width=width, color=colors[side], label=side_labels[side])
+            for p, v in zip(pos, vals):
+                if v < 0:
+                    ax.text(p, v * 0.50, f"{v:.1f}", ha="center", va="center", fontsize=7.2, rotation=90, color="white")
+                else:
+                    ax.text(p, v + 0.06 * max(1.0, max(vals_all)), f"{v:.1f}", ha="center", va="bottom", fontsize=7.2)
+        low = min(vals_all + [0])
+        high = max(vals_all + [0])
+        span = max(high - low, 10.0)
+        ax.axhline(0, color="#111827", linewidth=0.8)
+        ax.set_xticks(x)
+        ax.set_xticklabels(["United", "Other"])
+        ax.set_ylim(low - 0.16 * span, high + 0.22 * span)
+        ax.set_ylabel("Seat change (thousand)")
+        ax.set_title(title, loc="center", pad=4)
 
-    handles, labels = axes[0].get_legend_handles_labels()
-    fig.legend(handles, labels, ncol=2, frameon=False, loc="lower center", bbox_to_anchor=(0.5, 0.03))
-    fig.tight_layout(rect=[0, 0.16, 1, 1])
-    save_figure(fig, "fig_access_exposure")
+    fig_domestic, axes_domestic = plt.subplots(1, 3, figsize=(7.3, 2.85))
+    exposure_panel(axes_domestic[0], t100_summary, "(a)Domestic exposure", upper=112)
+    route_panel(axes_domestic[1], t100_summary, "(b)Domestic route access")
+    carrier_panel(axes_domestic[2], carrier_summary, "(c)Domestic carrier burden")
+    handles, labels = axes_domestic[0].get_legend_handles_labels()
+    fig_domestic.legend(handles, labels, ncol=2, frameon=False, loc="lower center", bbox_to_anchor=(0.5, 0.00))
+    fig_domestic.tight_layout(rect=[0, 0.12, 1, 1], w_pad=1.0)
+    save_figure(fig_domestic, "fig_domestic_access_exposure")
+
+    fig_international, axes_international = plt.subplots(1, 3, figsize=(7.3, 2.85))
+    exposure_panel(axes_international[0], international_summary, "(a)International exposure", upper=122)
+    route_panel(axes_international[1], international_summary, "(b)International route access")
+    carrier_panel(axes_international[2], international_carrier, "(c)International carrier exposure")
+    handles, labels = axes_international[0].get_legend_handles_labels()
+    fig_international.legend(handles, labels, ncol=2, frameon=False, loc="lower center", bbox_to_anchor=(0.5, 0.00))
+    fig_international.tight_layout(rect=[0, 0.12, 1, 1], w_pad=1.0)
+    save_figure(fig_international, "fig_international_access_exposure")
 
 
 def make_policy_robustness_figure(did: pd.DataFrame, calendar_2024: pd.DataFrame, synthetic: pd.DataFrame) -> None:
@@ -341,10 +427,12 @@ def make_synthetic_diagnostic_figure(paths: pd.DataFrame, placebo: pd.DataFrame,
 def write_manifest() -> None:
     files = [
         "fig_policy_timeline.pdf",
+        "fig_dynamic_event_study.pdf",
         "fig_ewr_daily_event.pdf",
         "fig_synthetic_reliability.pdf",
         "fig_synthetic_diagnostics.pdf",
-        "fig_access_exposure.pdf",
+        "fig_domestic_access_exposure.pdf",
+        "fig_international_access_exposure.pdf",
         "fig_policy_robustness.pdf",
     ]
     manifest = {
@@ -364,19 +452,25 @@ def main() -> None:
     setup_style()
     ensure_dirs()
     daily = pd.read_csv(RESULT_DIR / "airport_side_daily.csv", parse_dates=["FlightDate"])
+    dynamic = pd.read_csv(DEEP_DIR / "dynamic_event_study.csv", parse_dates=["FlightDate"])
     paths = pd.read_csv(TRA_DIR / "synthetic_control_paths.csv", parse_dates=["FlightDate"])
     synthetic = pd.read_csv(TRA_DIR / "synthetic_control_summary.csv")
     placebo = pd.read_csv(TRA_DIR / "synthetic_control_placebos.csv")
     t100_summary = pd.read_csv(TRA_DIR / "t100_policy_exposure_summary.csv")
     carrier_summary = pd.read_csv(TRA_DIR / "t100_carrier_policy_summary.csv")
+    international_summary = pd.read_csv(INTL_DIR / "t100_international_policy_summary.csv")
+    international_summary = international_summary[international_summary["year"] == 2025].copy()
+    international_carrier = pd.read_csv(INTL_DIR / "t100_international_carrier_policy_summary.csv")
+    international_carrier = international_carrier[international_carrier["year"] == 2025].copy()
     externality = pd.read_csv(TRA_DIR / "delay_exposure_accounting.csv")
     did = pd.read_csv(DID_DIR / "did_robustness.csv")
     calendar_2024 = pd.read_csv(CAL_PLACEBO_DIR / "calendar_placebo_2024_did.csv")
 
     make_daily_event_figure(daily)
+    make_dynamic_event_study_figure(dynamic)
     make_synthetic_figure(paths, synthetic)
     make_synthetic_diagnostic_figure(paths, placebo, synthetic)
-    make_access_exposure_figure(t100_summary, carrier_summary, externality)
+    make_access_exposure_figure(t100_summary, carrier_summary, international_summary, international_carrier, externality)
     make_policy_robustness_figure(did, calendar_2024, synthetic)
     write_manifest()
     print(f"Wrote TRA figures to {FIGURE_DIR}")

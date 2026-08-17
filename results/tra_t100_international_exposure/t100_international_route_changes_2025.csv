@@ -1,0 +1,169 @@
+side,counterpart,counterpart_city,apr_seats,jun_seats,seat_change_apr_to_jun,apr_passengers,jun_passengers,passenger_change_apr_to_jun
+arr,TLV,"Tel Aviv, Israel",31458,4073,-27385,27069,3314,-23755
+arr,SJO,"San Jose, Costa Rica",10458,5478,-4980,9953,5245,-4708
+arr,CUN,"Cancun, Mexico",26563,21902,-4661,21892,17585,-4307
+arr,DXB,"Dubai, United Arab Emirates",10850,6650,-4200,9234,5246,-3988
+arr,GCM,"Grand Cayman, Cayman Islands",5370,716,-4654,4400,543,-3857
+arr,PLS,"Providenciales, Turks and Caicos Islands",10382,5318,-5064,7528,3729,-3799
+arr,LHR,"London, United Kingdom",49400,48762,-638,38640,35129,-3511
+arr,AUA,"Aruba, Aruba",16870,14602,-2268,14701,11220,-3481
+arr,BGI,"Barbados/Bridgetown, Barbados",5318,703,-4615,3505,317,-3188
+arr,YUL,"Montreal, Canada",10886,7616,-3270,8249,5232,-3017
+arr,POP,"Puerto Plata, Dominican Republic",5012,1559,-3453,4276,1426,-2850
+arr,ANU,"St. Johns, Antigua and Barbuda",4475,716,-3759,3434,621,-2813
+arr,YTZ,"Toronto, Canada",16146,12792,-3354,12081,9724,-2357
+arr,FRA,"Frankfurt, Germany",23654,23501,-153,19968,17821,-2147
+arr,DEL,"Delhi, India",13714,13168,-546,12408,10341,-2067
+arr,AMS,"Amsterdam, Netherlands",8004,8280,276,7129,5317,-1812
+arr,SJD,"San Jose del Cabo, Mexico",3346,1572,-1774,2728,1362,-1366
+arr,ZRH,"Zurich, Switzerland",11839,11756,-83,9825,8515,-1310
+arr,NAS,"Nassau, The Bahamas",9999,9195,-804,8440,7180,-1260
+arr,BRU,"Brussels, Belgium",9540,9926,386,8868,7720,-1148
+arr,HND,"Tokyo, Japan",7728,7728,0,7006,5875,-1131
+arr,LIR,"Liberia, Costa Rica",4814,4993,179,4427,3296,-1131
+arr,BOM,"Mumbai, India",4282,3644,-638,3704,2606,-1098
+arr,PTY,"Panama City, Panama",10916,10210,-706,10257,9328,-929
+arr,VIE,"Vienna, Austria",9900,9900,0,8767,7925,-842
+arr,YYZ,"Toronto, Canada",17894,18672,778,15008,14298,-710
+arr,MEX,"Mexico City, Mexico",14608,14790,182,12245,11557,-688
+arr,GVA,"Geneva, Switzerland",4843,5074,231,3885,3210,-675
+arr,PUJ,"Punta Cana, Dominican Republic",16013,16521,508,13985,13319,-666
+arr,BER,"Berlin, Germany",6930,7033,103,6143,5577,-566
+arr,MXP,"Milan, Italy",10180,9724,-456,8666,8162,-504
+arr,CPH,"Copenhagen, Denmark",7174,7964,790,6160,5691,-469
+arr,KRK,"Krakow, Poland",1008,504,-504,877,413,-464
+arr,DUB,"Dublin, Ireland",19180,18860,-320,14259,13900,-359
+arr,SIN,"Singapore, Singapore",4830,4991,161,4507,4362,-145
+arr,PVR,"Puerto Vallarta, Mexico",677,677,0,521,385,-136
+arr,DOM,"Marigot, Dominica",504,504,0,442,337,-105
+arr,BON,"Bonaire, Bonaire, Sint Eustatius, and Saba",664,677,13,546,445,-101
+arr,SKB,"St. Kitts, Saint Kitts and Nevis",537,716,179,372,279,-93
+arr,BZE,"Belize City, Belize",677,664,-13,535,448,-87
+arr,NRT,"Tokyo, Japan",7453,7453,0,6709,6625,-84
+arr,MBJ,"Montego Bay, Jamaica",10688,10688,0,9251,9181,-70
+arr,CPT,"Cape Town, South Africa",3084,3084,0,2863,2804,-59
+arr,OSL,"Oslo, Norway",3925,4082,157,2961,2909,-52
+arr,UVF,"St. Lucia, Saint Lucia",504,557,53,438,396,-42
+arr,GRU,"Sao Paulo, Brazil",8428,8354,-74,7544,7506,-38
+arr,CUR,"Willemstad, Curacao",504,557,53,438,415,-23
+arr,BCN,"Barcelona, Spain",7728,8910,1182,6873,6863,-10
+arr,SXM,"Philipsburg, Sint Maarten",4694,4980,286,3730,3742,12
+arr,CAI,"Cairo, Egypt",3684,3991,307,2800,2816,16
+arr,LIM,"Lima, Peru",4983,5104,121,4572,4599,27
+arr,MAD,"Madrid, Spain",6635,6930,295,5836,5882,46
+arr,VCE,"Venice, Italy",6699,6930,231,5481,5532,51
+arr,KEF,"Keflavik/Reykjavik, Iceland",6183,7776,1593,5726,5796,70
+arr,BDA,"Hamilton, Bermuda",4827,5006,179,3526,3645,119
+arr,ICN,"Seoul, South Korea",6465,7624,1159,5622,5772,150
+arr,YQB,"Quebec, Canada",4314,4864,550,3264,3506,242
+arr,SNN,"Shannon, Ireland",4576,5271,695,3501,3765,264
+arr,RZE,"Rzeszow, Poland",1092,1344,252,834,1159,325
+arr,CDG,"Paris, France",21587,24375,2788,19175,19534,359
+arr,IST,"Istanbul, Turkey",8670,9870,1200,7576,7995,419
+arr,YOW,"Ottawa, Canada",8530,9942,1412,5638,6078,440
+arr,YHZ,"Halifax, Canada",2014,3177,1163,1688,2181,493
+arr,STI,"Santiago, Dominican Republic",20779,23660,2881,19072,19652,580
+arr,SAP,"San Pedro Sula, Honduras",664,1328,664,625,1227,602
+arr,YYC,"Calgary, Canada",4392,4392,0,3009,3645,636
+arr,WAW,"Warsaw, Poland",4620,6090,1470,4092,4871,779
+arr,JNB,"Johannesburg, South Africa",7196,7710,514,5063,6023,960
+arr,MUC,"Munich, Germany",14829,16878,2049,12679,13947,1268
+arr,ORY,"Paris, France",14435,19781,5346,12880,14437,1557
+arr,GUA,"Guatemala City, Guatemala",2822,4980,2158,2674,4561,1887
+arr,EDI,"Edinburgh, United Kingdom",5280,10384,5104,4497,6411,1914
+arr,SAL,"San Salvador, El Salvador",2158,4827,2669,2011,4052,2041
+arr,LIS,"Lisbon, Portugal",19069,22523,3454,17463,19955,2492
+arr,FCO,"Rome, Italy",14363,16821,2458,11675,14214,2539
+arr,ARN,"Stockholm, Sweden",7181,11665,4484,6159,8913,2754
+arr,ADD,"Addis Ababa, Ethiopia",3510,10260,6750,2147,5032,2885
+arr,SDQ,"Santo Domingo, Dominican Republic",15931,21631,5700,14592,18344,3752
+arr,NCE,"Nice, France",1336,6001,4665,984,4776,3792
+arr,BOG,"Bogota, Colombia",4814,9628,4814,3779,7849,4070
+arr,YVR,"Vancouver, Canada",11280,16288,5008,9444,13599,4155
+arr,OPO,"Porto, Portugal",9456,15428,5972,8341,12503,4162
+arr,NAP,"Naples, Italy",4509,9853,5344,3608,8301,4693
+arr,ATH,"Athens, Greece",19259,21830,2571,13134,18120,4986
+dep,TLV,"Tel Aviv, Israel",31561,4073,-27488,27990,2780,-25210
+dep,PLS,"Providenciales, Turks and Caicos Islands",10740,5331,-5409,7786,3746,-4040
+dep,GCM,"Grand Cayman, Cayman Islands",5370,716,-4654,4156,570,-3586
+dep,SJO,"San Jose, Costa Rica",10624,5976,-4648,9233,5669,-3564
+dep,YUL,"Montreal, Canada",11628,7463,-4165,9567,6046,-3521
+dep,CUN,"Cancun, Mexico",26892,22231,-4661,21855,18833,-3022
+dep,BGI,"Barbados/Bridgetown, Barbados",5318,703,-4615,3434,461,-2973
+dep,DXB,"Dubai, United Arab Emirates",10150,5950,-4200,8209,5475,-2734
+dep,ANU,"St. Johns, Antigua and Barbuda",4475,716,-3759,3175,636,-2539
+dep,POP,"Puerto Plata, Dominican Republic",5370,1559,-3811,3888,1458,-2430
+dep,AUA,"Aruba, Aruba",17032,14781,-2251,14778,12453,-2325
+dep,YTZ,"Toronto, Canada",15756,12714,-3042,11020,9396,-1624
+dep,SJD,"San Jose del Cabo, Mexico",3346,1572,-1774,2660,1095,-1565
+dep,AMS,"Amsterdam, Netherlands",8280,8280,0,7304,6797,-507
+dep,LIR,"Liberia, Costa Rica",4980,4980,0,3903,3520,-383
+dep,BOM,"Mumbai, India",4282,3644,-638,2910,2610,-300
+dep,MEX,"Mexico City, Mexico",14774,14618,-156,12075,11803,-272
+dep,YQB,"Quebec, Canada",4396,4712,316,3514,3330,-184
+dep,SIN,"Singapore, Singapore",4830,4991,161,4088,3938,-150
+dep,BDA,"Hamilton, Bermuda",4993,5006,13,4116,3984,-132
+dep,PVR,"Puerto Vallarta, Mexico",677,677,0,563,440,-123
+dep,SKB,"St. Kitts, Saint Kitts and Nevis",716,716,0,467,390,-77
+dep,SXM,"Philipsburg, Sint Maarten",4980,4980,0,4151,4113,-38
+dep,CPT,"Cape Town, South Africa",3341,3084,-257,2650,2626,-24
+dep,UVF,"St. Lucia, Saint Lucia",504,504,0,438,429,-9
+dep,DOM,"Marigot, Dominica",504,504,0,376,371,-5
+dep,PTY,"Panama City, Panama",10740,10350,-390,8742,8754,12
+dep,BZE,"Belize City, Belize",664,664,0,491,514,23
+dep,CUR,"Willemstad, Curacao",504,557,53,430,460,30
+dep,BON,"Bonaire, Bonaire, Sint Eustatius, and Saba",664,677,13,551,585,34
+dep,SNN,"Shannon, Ireland",4928,5280,352,3849,3887,38
+dep,NAS,"Nassau, The Bahamas",9986,9540,-446,8142,8184,42
+dep,KRK,"Krakow, Poland",1008,1008,0,836,908,72
+dep,HND,"Tokyo, Japan",8280,8004,-276,7282,7379,97
+dep,LIM,"Lima, Peru",5335,5280,-55,4601,4718,117
+dep,YYC,"Calgary, Canada",4392,4246,-146,3569,3866,297
+dep,MXP,"Milan, Italy",10180,9724,-456,8808,9115,307
+dep,GRU,"Sao Paulo, Brazil",8152,8354,202,6849,7229,380
+dep,RZE,"Rzeszow, Poland",1176,1344,168,846,1242,396
+dep,OSL,"Oslo, Norway",3923,4078,155,2975,3389,414
+dep,BRU,"Brussels, Belgium",9540,10102,562,8399,8824,425
+dep,YHZ,"Halifax, Canada",2014,2736,722,1727,2192,465
+dep,PUJ,"Punta Cana, Dominican Republic",16533,16521,-12,14686,15155,469
+dep,VIE,"Vienna, Austria",9900,9900,0,8973,9476,503
+dep,NRT,"Tokyo, Japan",7710,7710,0,6789,7300,511
+dep,MBJ,"Montego Bay, Jamaica",10509,10688,179,8998,9523,525
+dep,VCE,"Venice, Italy",6930,6930,0,5417,5946,529
+dep,BER,"Berlin, Germany",6930,7033,103,5747,6337,590
+dep,SAP,"San Pedro Sula, Honduras",664,1328,664,576,1170,594
+dep,JNB,"Johannesburg, South Africa",7453,7710,257,5935,6587,652
+dep,DUB,"Dublin, Ireland",19080,18693,-387,13816,14485,669
+dep,WAW,"Warsaw, Poland",4620,5586,966,3827,4555,728
+dep,BCN,"Barcelona, Spain",8004,8952,948,7136,7886,750
+dep,CAI,"Cairo, Egypt",3684,3991,307,2555,3367,812
+dep,GVA,"Geneva, Switzerland",4843,5074,231,3304,4117,813
+dep,MAD,"Madrid, Spain",6173,7106,933,5532,6379,847
+dep,CPH,"Copenhagen, Denmark",7436,7957,521,6480,7589,1109
+dep,ZRH,"Zurich, Switzerland",11770,11923,153,9173,10356,1183
+dep,DEL,"Delhi, India",13714,12568,-1146,9061,10410,1349
+dep,YOW,"Ottawa, Canada",8540,9774,1234,5548,7002,1454
+dep,YYZ,"Toronto, Canada",17470,19100,1630,15245,16754,1509
+dep,ICN,"Seoul, South Korea",6145,7280,1135,4875,6393,1518
+dep,EDI,"Edinburgh, United Kingdom",5280,10384,5104,4773,6323,1550
+dep,KEF,"Keflavik/Reykjavik, Iceland",6183,7952,1769,5151,6860,1709
+dep,GUA,"Guatemala City, Guatemala",2822,4980,2158,2550,4340,1790
+dep,IST,"Istanbul, Turkey",8670,9870,1200,6836,8628,1792
+dep,MUC,"Munich, Germany",15150,16653,1503,12366,14687,2321
+dep,LHR,"London, United Kingdom",49525,48908,-617,41089,43420,2331
+dep,SAL,"San Salvador, El Salvador",1992,4993,3001,1735,4131,2396
+dep,FRA,"Frankfurt, Germany",23728,23851,123,18805,21678,2873
+dep,FCO,"Rome, Italy",14915,17171,2256,13009,15954,2945
+dep,CDG,"Paris, France",21898,24278,2380,19231,22310,3079
+dep,LIS,"Lisbon, Portugal",19493,22509,3016,17195,20652,3457
+dep,NCE,"Nice, France",1670,5925,4255,1121,5243,4122
+dep,NAP,"Naples, Italy",4676,9853,5177,3898,8255,4357
+dep,OPO,"Porto, Portugal",9611,15239,5628,8603,13171,4568
+dep,ARN,"Stockholm, Sweden",6910,11844,4934,5717,10411,4694
+dep,BOG,"Bogota, Colombia",4980,9960,4980,4224,8951,4727
+dep,STI,"Santiago, Dominican Republic",20767,24001,3234,18054,22791,4737
+dep,YVR,"Vancouver, Canada",11340,16171,4831,9210,14176,4966
+dep,ATH,"Athens, Greece",19840,22164,2324,13652,18686,5034
+dep,ORY,"Paris, France",14435,19857,5422,12429,18136,5707
+dep,SDQ,"Santo Domingo, Dominican Republic",16110,22134,6024,14531,20468,5937
+dep,ADD,"Addis Ababa, Ethiopia",3510,10260,6750,2012,8552,6540

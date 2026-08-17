@@ -8,14 +8,18 @@
     "fig_policy_timeline.pdf",
     "fig_ewr_daily_event.pdf",
     "fig_synthetic_reliability.pdf",
-    "fig_access_exposure.pdf",
+    "fig_synthetic_diagnostics.pdf",
+    "fig_domestic_access_exposure.pdf",
+    "fig_international_access_exposure.pdf",
     "fig_policy_robustness.pdf"
   ],
   "previews": [
     "fig_policy_timeline.png",
     "fig_ewr_daily_event.png",
     "fig_synthetic_reliability.png",
-    "fig_access_exposure.png",
+    "fig_synthetic_diagnostics.png",
+    "fig_domestic_access_exposure.png",
+    "fig_international_access_exposure.png",
     "fig_policy_robustness.png"
   ],
   "note": "Data figures are generated from existing result CSVs and do not rerun the full analysis."

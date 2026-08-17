@@ -1,6 +1,6 @@
-# EWR 2025 airport capacity intervention
+# EWR 2025 temporary airport operating limits
 
-This repository provides reproducible code and selected derived outputs for an open-data analysis of the 2025 airport capacity intervention at Newark Liberty International Airport (EWR).
+This repository provides reproducible code and selected derived outputs for an open-data analysis of the 2025 temporary airport operating-limit episode at Newark Liberty International Airport (EWR).
 
 The submitted article, article PDF, LaTeX source, Word submission files, cover letter, title page, declaration forms, reference library, and publisher templates are intentionally excluded.
 
@@ -16,23 +16,32 @@ The submitted article, article PDF, LaTeX source, Word submission files, cover l
 - `results/identification_checks/`: short-window DID, event-time DID, multiple placebo, and airport-label permutation results.
 - `results/calendar_placebo_2024/`: same-calendar 2024 placebo results.
 - `results/transferability_checks/`: 50-airport benchmark outputs.
-- `results/tra_policy_experiments/`: synthetic-control recovery contrasts, donor-exclusion sensitivity, T-100 passenger and seat exposure, and delay-exposure accounting.
+- `results/tra_policy_experiments/`: synthetic-control recovery contrasts, donor-exclusion sensitivity, domestic T-100 passenger and seat exposure, and delay-exposure accounting.
+- `results/tra_t100_international_exposure/`: international T-100 access and carrier-exposure summaries used for the access-preservation checks.
+- `results/tra_identification_upgrade/`: calendar-date fixed-effect phase estimates and stress-start sensitivity.
+- `results/tra_peak_hour_mechanism/`: peak-hour pressure models connecting reported schedule exposure with reliability.
+- `results/tra_weather_controls/`: station-weather controls based on ASOS/AWOS/METAR records.
+- `results/tra_atcscc_advisories/`: ATCSCC advisory diagnostics for flow-management pressure.
+- `results/tra_deep_policy_checks/`: dynamic event-study contrasts, severe-delay checks, weighted market retention, ridge counterfactuals, passenger-time bootstrap intervals, and carrier-group heterogeneity.
 - `results/operational_policy_mechanism/`: policy-mechanism bridge table linking capacity governance, peak-hour pressure, reliability, counterfactual checks, access, and carrier response.
 - `results/figure_previews/`: PNG previews of the figures generated from the public-data results.
 - `data/raw_bts_2025/` and `data/raw_bts_2024/`: placeholder folders for public BTS ZIP files. Raw BTS files are not committed.
 - `data/t100_domestic_segment/`: placeholder folder for public BTS T-100 Domestic Segment ZIP files. Raw T-100 files are not committed.
+- `data/t100_international_segment/`: placeholder folder for public BTS T-100 International Segment ZIP files. Raw T-100 files are not committed.
 
 ## Public data sources
 
 All empirical inputs are publicly available:
 
 - Bureau of Transportation Statistics On-Time Performance records: <https://www.transtats.bts.gov/OT_Delay/>
-- Bureau of Transportation Statistics T-100 Domestic Segment records: <https://www.transtats.bts.gov/>
+- Bureau of Transportation Statistics T-100 Domestic and International Segment records: <https://www.transtats.bts.gov/>
 - Federal Register notice of meeting: <https://www.federalregister.gov/documents/2025/05/14/2025-08559/operating-limitations-at-newark-liberty-international-airport-notice-of-meeting-and-request-for>
 - Federal Register interim order: <https://www.federalregister.gov/documents/2025/05/23/2025-09376/operating-limitations-at-newark-liberty-international-airport-interim-order-establishing-targeted>
 - Federal Register final order: <https://www.federalregister.gov/documents/2025/06/10/2025-10613/operating-limitations-at-newark-liberty-international-airport-order-establishing-targeted-scheduling>
 - Federal Register extension: <https://www.federalregister.gov/documents/2025/09/29/2025-18871/operating-limitations-at-newark-liberty-international-airport>
 - FAA ATADS/OPSNET Airport Operations Standard Report: <https://www.aspm.faa.gov/opsnet/sys/Airport.asp>
+- Iowa Environmental Mesonet ASOS/AWOS/METAR archive: <https://mesonet.agron.iastate.edu/request/download.phtml>
+- FAA ATCSCC operational information: <https://www.fly.faa.gov/>
 
 ## Raw BTS files
 
@@ -64,6 +73,8 @@ t100_domestic_segment_all_carriers_2025_02.zip
 t100_domestic_segment_all_carriers_2025_12.zip
 ```
 
+International access checks expect 2024 and 2025 T-100 International Segment ZIP files in `data/t100_international_segment/`. The workflow uses monthly records for April--June 2025 in the main access-preservation summary and the same months in 2024 for context checks.
+
 ## Environment
 
 Python 3.10 or later is recommended.
@@ -89,6 +100,12 @@ python src/add_calendar_placebo_2024.py --boot 499 --seed 20260520
 python src/add_tra_policy_experiments.py --top-n 50
 python src/add_tra_policy_exclusion_checks.py
 python src/add_operational_policy_mechanism_checks.py
+python src/add_tra_identification_upgrade.py
+python src/add_tra_peak_hour_mechanism.py
+python src/add_tra_asos_weather_controls.py
+python src/add_tra_atcscc_advisory_check.py
+python src/add_tra_t100_international_exposure.py
+python src/add_tra_deep_policy_checks.py --bootstrap-reps 2000
 python src/make_figures.py
 ```
 
@@ -101,6 +118,12 @@ python src/add_calendar_placebo_2024.py --smoke
 python src/add_tra_policy_experiments.py --smoke
 python src/add_tra_policy_exclusion_checks.py --smoke
 python src/add_operational_policy_mechanism_checks.py --smoke
+python src/add_tra_identification_upgrade.py --smoke
+python src/add_tra_peak_hour_mechanism.py --smoke
+python src/add_tra_asos_weather_controls.py --smoke
+python src/add_tra_atcscc_advisory_check.py --smoke
+python src/add_tra_t100_international_exposure.py --smoke
+python src/add_tra_deep_policy_checks.py --smoke --bootstrap-reps 300
 ```
 
 ## Scope

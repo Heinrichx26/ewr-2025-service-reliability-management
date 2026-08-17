@@ -1,0 +1,73 @@
+side,hour_group,metric,metric_label,unit,phase,coef,ci_low,ci_high
+arr,Facilitated hours,avg_ops_per_hour,Scheduled ops/hour,ops,Stress,-1.9960898645172849,-2.4077128600641298,-1.5844668689704398
+arr,Facilitated hours,avg_ops_per_hour,Scheduled ops/hour,ops,May 20--Jun 2,-3.1785285542788477,-3.577274289306138,-2.7797828192515572
+arr,Facilitated hours,avg_ops_per_hour,Scheduled ops/hour,ops,Jun 3--Jun 15,-3.6005567061989403,-3.966762032723823,-3.2343513796740577
+arr,Facilitated hours,p95_ops_per_hour,P95 scheduled ops/hour,ops,Stress,-3.6809620991254244,-4.673156450765477,-2.6887677474853717
+arr,Facilitated hours,p95_ops_per_hour,P95 scheduled ops/hour,ops,May 20--Jun 2,-3.2599125364431463,-4.302549158343399,-2.2172759145428937
+arr,Facilitated hours,p95_ops_per_hour,P95 scheduled ops/hour,ops,Jun 3--Jun 15,-3.9794236375868675,-4.932444489616396,-3.026402785557339
+arr,Facilitated hours,share_above_28,Share above 28/hour,pp,Stress,-0.001809295146631396,-0.009956685430489429,0.006338095137226637
+arr,Facilitated hours,share_above_28,Share above 28/hour,pp,May 20--Jun 2,-0.0029583261876187355,-0.01382487222140146,0.007908219846163989
+arr,Facilitated hours,share_above_28,Share above 28/hour,pp,Jun 3--Jun 15,-0.001883170850757926,-0.012305085647181227,0.008538743945665376
+arr,Facilitated hours,share_above_34,Share above 34/hour,pp,Stress,-0.0017321214199977094,-0.006074876963125846,0.002610634123130427
+arr,Facilitated hours,share_above_34,Share above 34/hour,pp,May 20--Jun 2,-0.0028297033098961793,-0.008102867467769174,0.002443460847976816
+arr,Facilitated hours,share_above_34,Share above 34/hour,pp,Jun 3--Jun 15,-0.003634420801287737,-0.009298633004339871,0.0020297914017643973
+arr,Facilitated hours,delay15_rate,Delay-15-plus rate,pp,Stress,0.26576372795942366,0.1948319957655936,0.3366954601532537
+arr,Facilitated hours,delay15_rate,Delay-15-plus rate,pp,May 20--Jun 2,0.12809068915291563,0.010033887260396127,0.24614749104543515
+arr,Facilitated hours,delay15_rate,Delay-15-plus rate,pp,Jun 3--Jun 15,-0.09570476528016279,-0.14652601040217453,-0.04488352015815105
+arr,Facilitated hours,nas_delay_per_scheduled_op,NAS delay,min/op,Stress,36.52292031187716,26.330009944129703,46.71583067962462
+arr,Facilitated hours,nas_delay_per_scheduled_op,NAS delay,min/op,May 20--Jun 2,13.318317013875694,0.9346618352874891,25.7019721924639
+arr,Facilitated hours,nas_delay_per_scheduled_op,NAS delay,min/op,Jun 3--Jun 15,-3.5557238926433525,-6.800545637951253,-0.31090214733545185
+arr,Other hours,avg_ops_per_hour,Scheduled ops/hour,ops,Stress,0.414785506039161,0.1435872443225848,0.6859837677557372
+arr,Other hours,avg_ops_per_hour,Scheduled ops/hour,ops,May 20--Jun 2,-0.5824656393169274,-0.8830796145605582,-0.2818516640732967
+arr,Other hours,avg_ops_per_hour,Scheduled ops/hour,ops,Jun 3--Jun 15,-1.1798128984717728,-1.489017012212349,-0.8706087847311967
+arr,Other hours,p95_ops_per_hour,P95 scheduled ops/hour,ops,Stress,1.5875655976676508,-0.026599720555781525,3.2017309158910834
+arr,Other hours,p95_ops_per_hour,P95 scheduled ops/hour,ops,May 20--Jun 2,-2.9388483965014127,-4.105064111422589,-1.7726326815802367
+arr,Other hours,p95_ops_per_hour,P95 scheduled ops/hour,ops,Jun 3--Jun 15,-4.686841220004453,-5.901779197292488,-3.4719032427164187
+arr,Other hours,share_above_28,Share above 28/hour,pp,Stress,0.03402748854643905,0.01362645846086451,0.05442851863201359
+arr,Other hours,share_above_28,Share above 28/hour,pp,May 20--Jun 2,0.0022907122032486526,0.00020106390549710657,0.004380360501000199
+arr,Other hours,share_above_28,Share above 28/hour,pp,Jun 3--Jun 15,-0.0002723224297568423,-0.003581432026813608,0.0030367871672999235
+arr,Other hours,share_above_34,Share above 34/hour,pp,Stress,0.0006247396917950928,-0.0008590313775613697,0.002108510761151555
+arr,Other hours,share_above_34,Share above 34/hour,pp,May 20--Jun 2,0.0010412328196584553,-0.000818810815638067,0.0029012764549549777
+arr,Other hours,share_above_34,Share above 34/hour,pp,Jun 3--Jun 15,0.0017460673437349752,0.00018195073274406156,0.003310183954725889
+arr,Other hours,delay15_rate,Delay-15-plus rate,pp,Stress,0.21667879094887257,0.14521582948031705,0.2881417524174281
+arr,Other hours,delay15_rate,Delay-15-plus rate,pp,May 20--Jun 2,0.024496645830385657,-0.07216842108629834,0.12116171274706966
+arr,Other hours,delay15_rate,Delay-15-plus rate,pp,Jun 3--Jun 15,-0.1216023557595993,-0.17689266780489943,-0.06631204371429918
+arr,Other hours,nas_delay_per_scheduled_op,NAS delay,min/op,Stress,19.938386316496175,12.600441033702936,27.276331599289414
+arr,Other hours,nas_delay_per_scheduled_op,NAS delay,min/op,May 20--Jun 2,3.5366832999225513,-3.1844745854954124,10.257841185340515
+arr,Other hours,nas_delay_per_scheduled_op,NAS delay,min/op,Jun 3--Jun 15,-4.1206091536118725,-7.02584682396089,-1.2153714832628548
+dep,Facilitated hours,avg_ops_per_hour,Scheduled ops/hour,ops,Stress,-1.9696364259990167,-2.413096244187704,-1.5261766078103292
+dep,Facilitated hours,avg_ops_per_hour,Scheduled ops/hour,ops,May 20--Jun 2,-3.360358429085913,-3.8129476881050466,-2.90776917006678
+dep,Facilitated hours,avg_ops_per_hour,Scheduled ops/hour,ops,Jun 3--Jun 15,-4.032937350764458,-4.49705021985837,-3.5688244816705454
+dep,Facilitated hours,p95_ops_per_hour,P95 scheduled ops/hour,ops,Stress,-2.0504956268222028,-2.8586815899227638,-1.2423096637216415
+dep,Facilitated hours,p95_ops_per_hour,P95 scheduled ops/hour,ops,May 20--Jun 2,-4.84489795918365,-5.709052255243951,-3.9807436631233495
+dep,Facilitated hours,p95_ops_per_hour,P95 scheduled ops/hour,ops,Jun 3--Jun 15,-5.516707782013866,-6.202597177389815,-4.830818386637918
+dep,Facilitated hours,share_above_28,Share above 28/hour,pp,Stress,-0.05578802949751434,-0.07481073514812614,-0.03676532384690254
+dep,Facilitated hours,share_above_28,Share above 28/hour,pp,May 20--Jun 2,-0.0793174412622198,-0.09873779438463828,-0.05989708813980133
+dep,Facilitated hours,share_above_28,Share above 28/hour,pp,Jun 3--Jun 15,-0.0836444467897049,-0.10293928921913556,-0.06434960436027423
+dep,Facilitated hours,share_above_34,Share above 34/hour,pp,Stress,4.287429257283751e-05,-0.005397928039399983,0.005483676624545658
+dep,Facilitated hours,share_above_34,Share above 34/hour,pp,May 20--Jun 2,0.005359286571770779,-0.0003615883234298336,0.01108016146697139
+dep,Facilitated hours,share_above_34,Share above 34/hour,pp,Jun 3--Jun 15,-0.0011707979895256432,-0.007980238228288467,0.0056386422492371805
+dep,Facilitated hours,delay15_rate,Delay-15-plus rate,pp,Stress,0.13857171198635485,0.0909424320109626,0.1862009919617471
+dep,Facilitated hours,delay15_rate,Delay-15-plus rate,pp,May 20--Jun 2,0.004286849853507358,-0.06436626855450497,0.07293996826151969
+dep,Facilitated hours,delay15_rate,Delay-15-plus rate,pp,Jun 3--Jun 15,-0.08994761557896187,-0.13063775542913172,-0.049257475728792015
+dep,Facilitated hours,nas_delay_per_scheduled_op,NAS delay,min/op,Stress,4.539980893098901,2.428262811820477,6.651698974377325
+dep,Facilitated hours,nas_delay_per_scheduled_op,NAS delay,min/op,May 20--Jun 2,1.2119110886247473,-1.287398872876496,3.7112210501259906
+dep,Facilitated hours,nas_delay_per_scheduled_op,NAS delay,min/op,Jun 3--Jun 15,0.638567255554761,-3.1468887696707313,4.424023280780253
+dep,Other hours,avg_ops_per_hour,Scheduled ops/hour,ops,Stress,0.39250312369846413,0.20113725672483332,0.583868990672095
+dep,Other hours,avg_ops_per_hour,Scheduled ops/hour,ops,May 20--Jun 2,-0.08829654310703595,-0.31152843726301765,0.13493535104894572
+dep,Other hours,avg_ops_per_hour,Scheduled ops/hour,ops,Jun 3--Jun 15,-0.1900490180373516,-0.37569454574730843,-0.004403490327394788
+dep,Other hours,p95_ops_per_hour,P95 scheduled ops/hour,ops,Stress,1.6810058309037754,0.7877460419295914,2.574265619877959
+dep,Other hours,p95_ops_per_hour,P95 scheduled ops/hour,ops,May 20--Jun 2,-0.7452623906705407,-1.687774758243668,0.1972499769025865
+dep,Other hours,p95_ops_per_hour,P95 scheduled ops/hour,ops,Jun 3--Jun 15,-1.0525398071316248,-1.870265336209676,-0.23481427805357358
+dep,Other hours,share_above_28,Share above 28/hour,pp,Stress,-1.0006023656888246e-17,,
+dep,Other hours,share_above_28,Share above 28/hour,pp,May 20--Jun 2,-5.110250469763726e-18,,
+dep,Other hours,share_above_28,Share above 28/hour,pp,Jun 3--Jun 15,-0.0011213276519398986,-0.0019091305127115956,-0.00033352479116820156
+dep,Other hours,share_above_34,Share above 34/hour,pp,Stress,0.0,0.0,0.0
+dep,Other hours,share_above_34,Share above 34/hour,pp,May 20--Jun 2,0.0,0.0,0.0
+dep,Other hours,share_above_34,Share above 34/hour,pp,Jun 3--Jun 15,0.0,0.0,0.0
+dep,Other hours,delay15_rate,Delay-15-plus rate,pp,Stress,0.06180484392539143,0.016495612365649094,0.10711407548513377
+dep,Other hours,delay15_rate,Delay-15-plus rate,pp,May 20--Jun 2,0.011704986465394333,-0.050498824669965615,0.07390879760075428
+dep,Other hours,delay15_rate,Delay-15-plus rate,pp,Jun 3--Jun 15,-0.015682916182797664,-0.07207071834477083,0.0407048859791755
+dep,Other hours,nas_delay_per_scheduled_op,NAS delay,min/op,Stress,1.4705295625395791,-0.9953497972803873,3.9364089223595453
+dep,Other hours,nas_delay_per_scheduled_op,NAS delay,min/op,May 20--Jun 2,-1.3256232761793618,-2.702132518414901,0.050885966056177345
+dep,Other hours,nas_delay_per_scheduled_op,NAS delay,min/op,Jun 3--Jun 15,-0.4645124691350324,-1.9216310033650157,0.9926060650949509

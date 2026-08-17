@@ -1,0 +1,50 @@
+# T-100 International Segment exposure experiment
+
+Scope: EWR records in BTS DB28SEG T-100 International Segment. Main sample keeps service class F and non-U.S. counterpart WAC codes.
+
+## April-to-June retention
+
+|   year | side   |   apr_departures_per_day |   jun_departures_per_day |   apr_seats_per_day |   jun_seats_per_day |   apr_passengers_per_day |   jun_passengers_per_day |   apr_routes |   jun_routes |   departure_retention_apr_to_jun |   seat_retention_apr_to_jun |   passenger_retention_apr_to_jun |   route_retention_apr_to_jun |   jun_passengers_per_departure |   jun_load_factor |   same_month_2024_seat_retention |   same_month_2024_passenger_retention |   same_month_2024_route_retention |
+|-------:|:-------|-------------------------:|-------------------------:|--------------------:|--------------------:|-------------------------:|-------------------------:|-------------:|-------------:|---------------------------------:|----------------------------:|---------------------------------:|-----------------------------:|-------------------------------:|------------------:|---------------------------------:|--------------------------------------:|----------------------------------:|
+|   2024 | arr    |                  132.167 |                  143.167 |             23951.6 |             26620.4 |                  20657.8 |                  22750.1 |           81 |           89 |                          1.08323 |                     1.11142 |                         1.10128  |                      1.09877 |                        158.906 |          0.85461  |                          1.11142 |                               1.10128 |                           1.09877 |
+|   2024 | dep    |                  133.067 |                  144.333 |             24125.8 |             26848.2 |                  19999.2 |                  24354.2 |           83 |           90 |                          1.08467 |                     1.11284 |                         1.21776  |                      1.08434 |                        168.736 |          0.907107 |                          1.11284 |                               1.21776 |                           1.08434 |
+|   2025 | arr    |                  136.333 |                  139.5   |             25317.6 |             26504.2 |                  21218   |                  20690.6 |           87 |           94 |                          1.02323 |                     1.04687 |                         0.975141 |                      1.08046 |                        148.319 |          0.780653 |                          1.11142 |                               1.10128 |                           1.09877 |
+|   2025 | dep    |                  137.633 |                  140.133 |             25551.7 |             26598.4 |                  20935.2 |                  22922.4 |           87 |           96 |                          1.01816 |                     1.04096 |                         1.09492  |                      1.10345 |                        163.576 |          0.861799 |                          1.11284 |                               1.21776 |                           1.08434 |
+
+## Carrier-group changes
+
+|   year | side   | carrier_group   |   apr_departures |   jun_departures |   apr_seats |   jun_seats |   apr_passengers |   jun_passengers |   departure_change_apr_to_jun |   seat_change_apr_to_jun |   passenger_change_apr_to_jun |
+|-------:|:-------|:----------------|-----------------:|-----------------:|------------:|------------:|-----------------:|-----------------:|------------------------------:|-------------------------:|------------------------------:|
+|   2024 | arr    | Other carriers  |             1780 |             1854 |      282885 |      311059 |           241212 |           261769 |                            74 |                    28174 |                         20557 |
+|   2024 | arr    | United          |             2185 |             2441 |      435664 |      487554 |           378522 |           420734 |                           256 |                    51890 |                         42212 |
+|   2024 | dep    | Other carriers  |             1780 |             1853 |      283004 |      311472 |           233566 |           285458 |                            73 |                    28468 |                         51892 |
+|   2024 | dep    | United          |             2212 |             2477 |      440771 |      493974 |           366410 |           445168 |                           265 |                    53203 |                         78758 |
+|   2025 | arr    | Other carriers  |             1730 |             1752 |      280853 |      301223 |           234057 |           231696 |                            22 |                    20370 |                         -2361 |
+|   2025 | arr    | United          |             2360 |             2433 |      478674 |      493902 |           402484 |           389021 |                            73 |                    15228 |                        -13463 |
+|   2025 | dep    | Other carriers  |             1738 |             1752 |      281424 |      300716 |           226558 |           258507 |                            14 |                    19292 |                         31949 |
+|   2025 | dep    | United          |             2391 |             2452 |      485128 |      497235 |           401497 |           429166 |                            61 |                    12107 |                         27669 |
+
+## Largest 2025 route passenger changes
+
+| side   | counterpart   | counterpart_city                         |   apr_seats |   jun_seats |   seat_change_apr_to_jun |   apr_passengers |   jun_passengers |   passenger_change_apr_to_jun |
+|:-------|:--------------|:-----------------------------------------|------------:|------------:|-------------------------:|-----------------:|-----------------:|------------------------------:|
+| arr    | TLV           | Tel Aviv, Israel                         |       31458 |        4073 |                   -27385 |            27069 |             3314 |                        -23755 |
+| arr    | SJO           | San Jose, Costa Rica                     |       10458 |        5478 |                    -4980 |             9953 |             5245 |                         -4708 |
+| arr    | CUN           | Cancun, Mexico                           |       26563 |       21902 |                    -4661 |            21892 |            17585 |                         -4307 |
+| arr    | DXB           | Dubai, United Arab Emirates              |       10850 |        6650 |                    -4200 |             9234 |             5246 |                         -3988 |
+| arr    | GCM           | Grand Cayman, Cayman Islands             |        5370 |         716 |                    -4654 |             4400 |              543 |                         -3857 |
+| arr    | PLS           | Providenciales, Turks and Caicos Islands |       10382 |        5318 |                    -5064 |             7528 |             3729 |                         -3799 |
+| arr    | LHR           | London, United Kingdom                   |       49400 |       48762 |                     -638 |            38640 |            35129 |                         -3511 |
+| arr    | AUA           | Aruba, Aruba                             |       16870 |       14602 |                    -2268 |            14701 |            11220 |                         -3481 |
+| arr    | BGI           | Barbados/Bridgetown, Barbados            |        5318 |         703 |                    -4615 |             3505 |              317 |                         -3188 |
+| arr    | YUL           | Montreal, Canada                         |       10886 |        7616 |                    -3270 |             8249 |             5232 |                         -3017 |
+| dep    | TLV           | Tel Aviv, Israel                         |       31561 |        4073 |                   -27488 |            27990 |             2780 |                        -25210 |
+| dep    | PLS           | Providenciales, Turks and Caicos Islands |       10740 |        5331 |                    -5409 |             7786 |             3746 |                         -4040 |
+| dep    | GCM           | Grand Cayman, Cayman Islands             |        5370 |         716 |                    -4654 |             4156 |              570 |                         -3586 |
+| dep    | SJO           | San Jose, Costa Rica                     |       10624 |        5976 |                    -4648 |             9233 |             5669 |                         -3564 |
+| dep    | YUL           | Montreal, Canada                         |       11628 |        7463 |                    -4165 |             9567 |             6046 |                         -3521 |
+| dep    | CUN           | Cancun, Mexico                           |       26892 |       22231 |                    -4661 |            21855 |            18833 |                         -3022 |
+| dep    | BGI           | Barbados/Bridgetown, Barbados            |        5318 |         703 |                    -4615 |             3434 |              461 |                         -2973 |
+| dep    | DXB           | Dubai, United Arab Emirates              |       10150 |        5950 |                    -4200 |             8209 |             5475 |                         -2734 |
+| dep    | ANU           | St. Johns, Antigua and Barbuda           |        4475 |         716 |                    -3759 |             3175 |              636 |                         -2539 |
+| dep    | POP           | Puerto Plata, Dominican Republic         |        5370 |        1559 |                    -3811 |             3888 |             1458 |                         -2430 |
