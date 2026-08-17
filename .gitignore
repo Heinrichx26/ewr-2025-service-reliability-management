@@ -3,6 +3,8 @@ data/raw_bts_2025/*.zip
 data/raw_bts_2025/*.csv
 data/raw_bts_2024/*.zip
 data/raw_bts_2024/*.csv
+data/t100_domestic_segment/*.zip
+data/t100_domestic_segment/*.csv
 data/opsnet/*.html
 
 # Submitted article and publisher/submission materials are not part of this repository.

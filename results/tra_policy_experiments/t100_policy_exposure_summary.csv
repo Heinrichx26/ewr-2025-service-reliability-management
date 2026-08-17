@@ -1,0 +1,3 @@
+side,apr_seats_per_day,jun_seats_per_day,apr_passengers_per_day,jun_passengers_per_day,apr_routes,jun_routes,seat_retention_apr_to_jun,passenger_retention_apr_to_jun,route_retention_apr_to_jun,jun_passengers_per_departure
+arr,51584.833333333336,48750.2,43065.066666666666,41894.3,91,101,0.9450490938874151,0.9728140054738876,1.10989010989011,124.72253646918726
+dep,51508.166666666664,48634.6,43500.7,41643.5,86,94,0.9442114357270206,0.9573064341493356,1.0930232558139534,123.1448989650074

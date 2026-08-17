@@ -1,0 +1,5 @@
+side,carrier_group,apr_departures,jun_departures,apr_seats,jun_seats,departure_change_apr_to_jun,seat_change_apr_to_jun
+arr,Other carriers,5149.0,5328.0,589775.0,629261.0,179.0,39486.0
+arr,United,5413.0,4749.0,957770.0,833245.0,-664.0,-124525.0
+dep,Other carriers,5256.0,5414.0,588314.0,628401.0,158.0,40087.0
+dep,United,5418.0,4731.0,956931.0,830637.0,-687.0,-126294.0
