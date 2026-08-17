@@ -1,0 +1,665 @@
+treated_airport,side,metric,donor_airport,weight,scenario
+EWR,arr,delay15_rate,JFK,0.34068004426869575,Baseline donor pool
+EWR,arr,delay15_rate,LGA,0.31317340662021315,Baseline donor pool
+EWR,arr,delay15_rate,CMH,0.10748903596189699,Baseline donor pool
+EWR,arr,delay15_rate,PHL,0.08700408551073979,Baseline donor pool
+EWR,arr,delay15_rate,BOS,0.054420518648578754,Baseline donor pool
+EWR,arr,delay15_rate,DFW,0.052631408302136244,Baseline donor pool
+EWR,arr,delay15_rate,DEN,0.041439003249622026,Baseline donor pool
+EWR,arr,delay15_rate,DCA,0.0031624974381160155,Baseline donor pool
+EWR,arr,delay15_rate,ATL,2.7326413756761787e-16,Baseline donor pool
+EWR,arr,delay15_rate,PDX,1.6228075076829746e-16,Baseline donor pool
+EWR,arr,delay15_rate,HNL,1.3035119642622918e-16,Baseline donor pool
+EWR,arr,delay15_rate,DAL,1.1679186858736935e-16,Baseline donor pool
+EWR,arr,delay15_rate,IAD,9.683662531579504e-17,Baseline donor pool
+EWR,arr,delay15_rate,DTW,9.085162989463568e-17,Baseline donor pool
+EWR,arr,delay15_rate,SFO,7.220432828256629e-17,Baseline donor pool
+EWR,arr,delay15_rate,MSP,7.200776356978426e-17,Baseline donor pool
+EWR,arr,delay15_rate,AUS,5.2778543699753734e-17,Baseline donor pool
+EWR,arr,delay15_rate,MCI,4.955567117482707e-17,Baseline donor pool
+EWR,arr,delay15_rate,OAK,4.067696322226721e-17,Baseline donor pool
+EWR,arr,delay15_rate,RDU,3.326796969388235e-17,Baseline donor pool
+EWR,arr,delay15_rate,PIT,2.8028896576127626e-17,Baseline donor pool
+EWR,arr,delay15_rate,SAT,2.4273045809592775e-17,Baseline donor pool
+EWR,arr,delay15_rate,HOU,1.881077568723043e-17,Baseline donor pool
+EWR,arr,delay15_rate,MDW,1.6648539697716113e-17,Baseline donor pool
+EWR,arr,delay15_rate,IND,9.202615004707601e-18,Baseline donor pool
+EWR,arr,delay15_rate,CLT,5.818128977640389e-18,Baseline donor pool
+EWR,arr,delay15_rate,LAX,2.741044341235717e-18,Baseline donor pool
+EWR,arr,delay15_rate,SJU,1.4845108680056817e-19,Baseline donor pool
+EWR,arr,delay15_rate,SEA,0.0,Baseline donor pool
+EWR,arr,delay15_rate,LAS,0.0,Baseline donor pool
+EWR,arr,delay15_rate,PHX,0.0,Baseline donor pool
+EWR,arr,delay15_rate,ORD,0.0,Baseline donor pool
+EWR,arr,delay15_rate,MCO,0.0,Baseline donor pool
+EWR,arr,delay15_rate,SLC,0.0,Baseline donor pool
+EWR,arr,delay15_rate,IAH,0.0,Baseline donor pool
+EWR,arr,delay15_rate,TPA,0.0,Baseline donor pool
+EWR,arr,delay15_rate,FLL,0.0,Baseline donor pool
+EWR,arr,delay15_rate,BNA,0.0,Baseline donor pool
+EWR,arr,delay15_rate,MIA,0.0,Baseline donor pool
+EWR,arr,delay15_rate,BWI,0.0,Baseline donor pool
+EWR,arr,delay15_rate,SAN,0.0,Baseline donor pool
+EWR,arr,delay15_rate,SMF,0.0,Baseline donor pool
+EWR,arr,delay15_rate,STL,0.0,Baseline donor pool
+EWR,arr,delay15_rate,SJC,0.0,Baseline donor pool
+EWR,arr,delay15_rate,MSY,0.0,Baseline donor pool
+EWR,arr,delay15_rate,CLE,0.0,Baseline donor pool
+EWR,arr,delay15_rate,SNA,0.0,Baseline donor pool
+EWR,arr,delay15_rate,RSW,0.0,Baseline donor pool
+EWR,arr,delay15_rate,CVG,0.0,Baseline donor pool
+EWR,arr,nas_delay_per_scheduled_op,LGA,0.6126193676860311,Baseline donor pool
+EWR,arr,nas_delay_per_scheduled_op,JFK,0.38685828421811425,Baseline donor pool
+EWR,arr,nas_delay_per_scheduled_op,DEN,0.0005223480958529666,Baseline donor pool
+EWR,arr,nas_delay_per_scheduled_op,SMF,2.580518915450127e-16,Baseline donor pool
+EWR,arr,nas_delay_per_scheduled_op,LAS,2.0611888765064146e-16,Baseline donor pool
+EWR,arr,nas_delay_per_scheduled_op,ORD,1.7457870740136185e-16,Baseline donor pool
+EWR,arr,nas_delay_per_scheduled_op,SJC,1.6316131610364205e-16,Baseline donor pool
+EWR,arr,nas_delay_per_scheduled_op,MDW,1.548879043408357e-16,Baseline donor pool
+EWR,arr,nas_delay_per_scheduled_op,RSW,1.0423932487461779e-16,Baseline donor pool
+EWR,arr,nas_delay_per_scheduled_op,SFO,9.616928198031387e-17,Baseline donor pool
+EWR,arr,nas_delay_per_scheduled_op,PIT,8.808972808304648e-17,Baseline donor pool
+EWR,arr,nas_delay_per_scheduled_op,BOS,8.703520025585068e-17,Baseline donor pool
+EWR,arr,nas_delay_per_scheduled_op,SJU,8.107867378059588e-17,Baseline donor pool
+EWR,arr,nas_delay_per_scheduled_op,CLE,7.408291661082514e-17,Baseline donor pool
+EWR,arr,nas_delay_per_scheduled_op,SAT,7.375957922120972e-17,Baseline donor pool
+EWR,arr,nas_delay_per_scheduled_op,PDX,5.134967633704888e-17,Baseline donor pool
+EWR,arr,nas_delay_per_scheduled_op,OAK,5.112131403270245e-17,Baseline donor pool
+EWR,arr,nas_delay_per_scheduled_op,CMH,4.7876574884518e-17,Baseline donor pool
+EWR,arr,nas_delay_per_scheduled_op,TPA,4.636557585905341e-17,Baseline donor pool
+EWR,arr,nas_delay_per_scheduled_op,SAN,3.6326503872911546e-17,Baseline donor pool
+EWR,arr,nas_delay_per_scheduled_op,LAX,3.553306523127783e-17,Baseline donor pool
+EWR,arr,nas_delay_per_scheduled_op,AUS,2.433850496475268e-17,Baseline donor pool
+EWR,arr,nas_delay_per_scheduled_op,MSY,2.2323875692387284e-17,Baseline donor pool
+EWR,arr,nas_delay_per_scheduled_op,IAH,2.1634410100229752e-17,Baseline donor pool
+EWR,arr,nas_delay_per_scheduled_op,IAD,1.3106591210925332e-17,Baseline donor pool
+EWR,arr,nas_delay_per_scheduled_op,MCI,2.8516395340553324e-18,Baseline donor pool
+EWR,arr,nas_delay_per_scheduled_op,ATL,0.0,Baseline donor pool
+EWR,arr,nas_delay_per_scheduled_op,SEA,0.0,Baseline donor pool
+EWR,arr,nas_delay_per_scheduled_op,DCA,0.0,Baseline donor pool
+EWR,arr,nas_delay_per_scheduled_op,PHX,0.0,Baseline donor pool
+EWR,arr,nas_delay_per_scheduled_op,DFW,0.0,Baseline donor pool
+EWR,arr,nas_delay_per_scheduled_op,CLT,0.0,Baseline donor pool
+EWR,arr,nas_delay_per_scheduled_op,MCO,0.0,Baseline donor pool
+EWR,arr,nas_delay_per_scheduled_op,SLC,0.0,Baseline donor pool
+EWR,arr,nas_delay_per_scheduled_op,DTW,0.0,Baseline donor pool
+EWR,arr,nas_delay_per_scheduled_op,FLL,0.0,Baseline donor pool
+EWR,arr,nas_delay_per_scheduled_op,MIA,0.0,Baseline donor pool
+EWR,arr,nas_delay_per_scheduled_op,BNA,0.0,Baseline donor pool
+EWR,arr,nas_delay_per_scheduled_op,MSP,0.0,Baseline donor pool
+EWR,arr,nas_delay_per_scheduled_op,BWI,0.0,Baseline donor pool
+EWR,arr,nas_delay_per_scheduled_op,PHL,0.0,Baseline donor pool
+EWR,arr,nas_delay_per_scheduled_op,STL,0.0,Baseline donor pool
+EWR,arr,nas_delay_per_scheduled_op,DAL,0.0,Baseline donor pool
+EWR,arr,nas_delay_per_scheduled_op,HOU,0.0,Baseline donor pool
+EWR,arr,nas_delay_per_scheduled_op,RDU,0.0,Baseline donor pool
+EWR,arr,nas_delay_per_scheduled_op,IND,0.0,Baseline donor pool
+EWR,arr,nas_delay_per_scheduled_op,HNL,0.0,Baseline donor pool
+EWR,arr,nas_delay_per_scheduled_op,SNA,0.0,Baseline donor pool
+EWR,arr,nas_delay_per_scheduled_op,CVG,0.0,Baseline donor pool
+EWR,dep,delay15_rate,BOS,0.21854716779897634,Baseline donor pool
+EWR,dep,delay15_rate,LGA,0.2080509055947694,Baseline donor pool
+EWR,dep,delay15_rate,BWI,0.1685195336883554,Baseline donor pool
+EWR,dep,delay15_rate,IAH,0.14091021310968327,Baseline donor pool
+EWR,dep,delay15_rate,DAL,0.10492451826928448,Baseline donor pool
+EWR,dep,delay15_rate,SFO,0.08241955614763927,Baseline donor pool
+EWR,dep,delay15_rate,CMH,0.041787621643707085,Baseline donor pool
+EWR,dep,delay15_rate,HOU,0.03484048374758327,Baseline donor pool
+EWR,dep,delay15_rate,CLT,2.202359002330688e-16,Baseline donor pool
+EWR,dep,delay15_rate,MDW,1.6582507409844358e-16,Baseline donor pool
+EWR,dep,delay15_rate,DTW,1.262325714605414e-16,Baseline donor pool
+EWR,dep,delay15_rate,LAX,1.1446627636036358e-16,Baseline donor pool
+EWR,dep,delay15_rate,ATL,1.082517424095561e-16,Baseline donor pool
+EWR,dep,delay15_rate,MSY,1.0400044922060447e-16,Baseline donor pool
+EWR,dep,delay15_rate,SMF,9.627806383272556e-17,Baseline donor pool
+EWR,dep,delay15_rate,TPA,7.780652826097933e-17,Baseline donor pool
+EWR,dep,delay15_rate,DEN,7.598902816377216e-17,Baseline donor pool
+EWR,dep,delay15_rate,SJU,6.221164838559879e-17,Baseline donor pool
+EWR,dep,delay15_rate,PIT,5.225120318031743e-17,Baseline donor pool
+EWR,dep,delay15_rate,SEA,4.3793301678531334e-17,Baseline donor pool
+EWR,dep,delay15_rate,PDX,4.210364268081597e-17,Baseline donor pool
+EWR,dep,delay15_rate,SJC,3.176177280266117e-17,Baseline donor pool
+EWR,dep,delay15_rate,MCO,2.9020314512541264e-17,Baseline donor pool
+EWR,dep,delay15_rate,STL,2.6990484876559755e-17,Baseline donor pool
+EWR,dep,delay15_rate,SAN,2.0052223189860526e-17,Baseline donor pool
+EWR,dep,delay15_rate,SAT,1.9593466348552245e-17,Baseline donor pool
+EWR,dep,delay15_rate,FLL,1.6295514146740063e-17,Baseline donor pool
+EWR,dep,delay15_rate,RDU,1.1769491033126741e-17,Baseline donor pool
+EWR,dep,delay15_rate,RSW,1.175515127513286e-17,Baseline donor pool
+EWR,dep,delay15_rate,DFW,1.1131744950931605e-17,Baseline donor pool
+EWR,dep,delay15_rate,LAS,9.284870892263427e-18,Baseline donor pool
+EWR,dep,delay15_rate,AUS,8.35215288230891e-18,Baseline donor pool
+EWR,dep,delay15_rate,ORD,3.9169359862669035e-18,Baseline donor pool
+EWR,dep,delay15_rate,PHL,2.8717250193958883e-18,Baseline donor pool
+EWR,dep,delay15_rate,SLC,0.0,Baseline donor pool
+EWR,dep,delay15_rate,PHX,0.0,Baseline donor pool
+EWR,dep,delay15_rate,DCA,0.0,Baseline donor pool
+EWR,dep,delay15_rate,JFK,0.0,Baseline donor pool
+EWR,dep,delay15_rate,BNA,0.0,Baseline donor pool
+EWR,dep,delay15_rate,MSP,0.0,Baseline donor pool
+EWR,dep,delay15_rate,MIA,0.0,Baseline donor pool
+EWR,dep,delay15_rate,IAD,0.0,Baseline donor pool
+EWR,dep,delay15_rate,MCI,0.0,Baseline donor pool
+EWR,dep,delay15_rate,HNL,0.0,Baseline donor pool
+EWR,dep,delay15_rate,IND,0.0,Baseline donor pool
+EWR,dep,delay15_rate,CLE,0.0,Baseline donor pool
+EWR,dep,delay15_rate,SNA,0.0,Baseline donor pool
+EWR,dep,delay15_rate,OAK,0.0,Baseline donor pool
+EWR,dep,delay15_rate,CVG,0.0,Baseline donor pool
+EWR,dep,nas_delay_per_scheduled_op,MCO,0.32647150666342045,Baseline donor pool
+EWR,dep,nas_delay_per_scheduled_op,JFK,0.29889988068794243,Baseline donor pool
+EWR,dep,nas_delay_per_scheduled_op,IAH,0.12485555239618627,Baseline donor pool
+EWR,dep,nas_delay_per_scheduled_op,BOS,0.119760504932632,Baseline donor pool
+EWR,dep,nas_delay_per_scheduled_op,IAD,0.06968515375083237,Baseline donor pool
+EWR,dep,nas_delay_per_scheduled_op,RSW,0.03615518214925013,Baseline donor pool
+EWR,dep,nas_delay_per_scheduled_op,FLL,0.024172219419735033,Baseline donor pool
+EWR,dep,nas_delay_per_scheduled_op,PHX,2.0247654717309727e-16,Baseline donor pool
+EWR,dep,nas_delay_per_scheduled_op,OAK,1.3403395182766167e-16,Baseline donor pool
+EWR,dep,nas_delay_per_scheduled_op,SAT,1.2589015196139406e-16,Baseline donor pool
+EWR,dep,nas_delay_per_scheduled_op,LAS,1.013003708454566e-16,Baseline donor pool
+EWR,dep,nas_delay_per_scheduled_op,LAX,9.900587809208113e-17,Baseline donor pool
+EWR,dep,nas_delay_per_scheduled_op,CVG,6.84717725579255e-17,Baseline donor pool
+EWR,dep,nas_delay_per_scheduled_op,HNL,6.774748360371861e-17,Baseline donor pool
+EWR,dep,nas_delay_per_scheduled_op,DTW,6.279577987141629e-17,Baseline donor pool
+EWR,dep,nas_delay_per_scheduled_op,BWI,5.625598761469394e-17,Baseline donor pool
+EWR,dep,nas_delay_per_scheduled_op,SFO,5.395107347331229e-17,Baseline donor pool
+EWR,dep,nas_delay_per_scheduled_op,SEA,5.3014206137830264e-17,Baseline donor pool
+EWR,dep,nas_delay_per_scheduled_op,SLC,4.185842306651944e-17,Baseline donor pool
+EWR,dep,nas_delay_per_scheduled_op,CMH,3.3878957023186946e-17,Baseline donor pool
+EWR,dep,nas_delay_per_scheduled_op,ATL,3.290164862614139e-17,Baseline donor pool
+EWR,dep,nas_delay_per_scheduled_op,PHL,3.285203388326788e-17,Baseline donor pool
+EWR,dep,nas_delay_per_scheduled_op,PDX,2.1500464607065758e-17,Baseline donor pool
+EWR,dep,nas_delay_per_scheduled_op,BNA,1.7834975787073694e-17,Baseline donor pool
+EWR,dep,nas_delay_per_scheduled_op,TPA,1.2601217519734488e-17,Baseline donor pool
+EWR,dep,nas_delay_per_scheduled_op,PIT,8.702501773259001e-18,Baseline donor pool
+EWR,dep,nas_delay_per_scheduled_op,DCA,7.866901649462213e-18,Baseline donor pool
+EWR,dep,nas_delay_per_scheduled_op,MSP,5.107237086270802e-18,Baseline donor pool
+EWR,dep,nas_delay_per_scheduled_op,CLE,2.5588403921233225e-18,Baseline donor pool
+EWR,dep,nas_delay_per_scheduled_op,ORD,0.0,Baseline donor pool
+EWR,dep,nas_delay_per_scheduled_op,DFW,0.0,Baseline donor pool
+EWR,dep,nas_delay_per_scheduled_op,DEN,0.0,Baseline donor pool
+EWR,dep,nas_delay_per_scheduled_op,CLT,0.0,Baseline donor pool
+EWR,dep,nas_delay_per_scheduled_op,LGA,0.0,Baseline donor pool
+EWR,dep,nas_delay_per_scheduled_op,SMF,0.0,Baseline donor pool
+EWR,dep,nas_delay_per_scheduled_op,DAL,0.0,Baseline donor pool
+EWR,dep,nas_delay_per_scheduled_op,STL,0.0,Baseline donor pool
+EWR,dep,nas_delay_per_scheduled_op,SAN,0.0,Baseline donor pool
+EWR,dep,nas_delay_per_scheduled_op,MIA,0.0,Baseline donor pool
+EWR,dep,nas_delay_per_scheduled_op,AUS,0.0,Baseline donor pool
+EWR,dep,nas_delay_per_scheduled_op,MDW,0.0,Baseline donor pool
+EWR,dep,nas_delay_per_scheduled_op,SJC,0.0,Baseline donor pool
+EWR,dep,nas_delay_per_scheduled_op,IND,0.0,Baseline donor pool
+EWR,dep,nas_delay_per_scheduled_op,MCI,0.0,Baseline donor pool
+EWR,dep,nas_delay_per_scheduled_op,MSY,0.0,Baseline donor pool
+EWR,dep,nas_delay_per_scheduled_op,HOU,0.0,Baseline donor pool
+EWR,dep,nas_delay_per_scheduled_op,RDU,0.0,Baseline donor pool
+EWR,dep,nas_delay_per_scheduled_op,SNA,0.0,Baseline donor pool
+EWR,dep,nas_delay_per_scheduled_op,SJU,0.0,Baseline donor pool
+EWR,arr,delay15_rate,CMH,0.3018849918051998,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,delay15_rate,PHL,0.2968909605994664,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,delay15_rate,BOS,0.28841697153601353,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,delay15_rate,DEN,0.04930460578971629,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,delay15_rate,DCA,0.042876634110203975,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,delay15_rate,DFW,0.020625836159398905,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,delay15_rate,HNL,2.1676644033580447e-16,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,delay15_rate,AUS,1.3595240601697247e-16,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,delay15_rate,MCO,1.2816050297966246e-16,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,delay15_rate,MSP,1.143000240683092e-16,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,delay15_rate,SNA,9.861728460731776e-17,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,delay15_rate,MDW,9.318424914120626e-17,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,delay15_rate,STL,7.211556801932857e-17,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,delay15_rate,IAD,5.0475100398008187e-17,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,delay15_rate,SAT,4.76447250209794e-17,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,delay15_rate,RSW,4.46692669515428e-17,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,delay15_rate,PDX,3.9068321053152456e-17,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,delay15_rate,CVG,3.850090721200337e-17,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,delay15_rate,OAK,3.272196429799416e-17,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,delay15_rate,TPA,3.2135848420265964e-17,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,delay15_rate,PHX,3.0212896012399105e-17,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,delay15_rate,BWI,2.6021997856668676e-17,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,delay15_rate,DAL,1.288485987871377e-17,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,delay15_rate,PIT,6.0299210626763774e-18,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,delay15_rate,ATL,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,delay15_rate,SFO,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,delay15_rate,SEA,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,delay15_rate,LAX,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,delay15_rate,ORD,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,delay15_rate,CLT,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,delay15_rate,LAS,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,delay15_rate,IAH,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,delay15_rate,DTW,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,delay15_rate,SMF,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,delay15_rate,FLL,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,delay15_rate,BNA,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,delay15_rate,MIA,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,delay15_rate,SLC,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,delay15_rate,SAN,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,delay15_rate,SJC,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,delay15_rate,IND,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,delay15_rate,MCI,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,delay15_rate,MSY,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,delay15_rate,HOU,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,delay15_rate,RDU,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,delay15_rate,CLE,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,delay15_rate,SJU,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,nas_delay_per_scheduled_op,BOS,0.7442555712880631,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,nas_delay_per_scheduled_op,DEN,0.16367556889527785,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,nas_delay_per_scheduled_op,FLL,0.0865920475366875,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,nas_delay_per_scheduled_op,DCA,0.0054768122799700005,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,nas_delay_per_scheduled_op,PHX,3.0527257370156977e-16,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,nas_delay_per_scheduled_op,SLC,1.8210693795179913e-16,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,nas_delay_per_scheduled_op,MDW,1.7048230420628776e-16,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,nas_delay_per_scheduled_op,TPA,1.2671600123680302e-16,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,nas_delay_per_scheduled_op,IND,1.0969957332381276e-16,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,nas_delay_per_scheduled_op,CLT,1.0668817621058628e-16,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,nas_delay_per_scheduled_op,OAK,1.0278435394704946e-16,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,nas_delay_per_scheduled_op,SAT,9.97077160944168e-17,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,nas_delay_per_scheduled_op,SAN,8.454153695827909e-17,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,nas_delay_per_scheduled_op,HNL,7.662288008481131e-17,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,nas_delay_per_scheduled_op,ORD,6.676647297442067e-17,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,nas_delay_per_scheduled_op,PDX,6.029253937481431e-17,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,nas_delay_per_scheduled_op,STL,5.600298452982366e-17,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,nas_delay_per_scheduled_op,PIT,3.895060589829802e-17,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,nas_delay_per_scheduled_op,CMH,3.523472527231458e-17,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,nas_delay_per_scheduled_op,LAX,3.521835877705419e-17,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,nas_delay_per_scheduled_op,CLE,3.423853364165647e-17,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,nas_delay_per_scheduled_op,SJU,2.885534751690614e-17,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,nas_delay_per_scheduled_op,PHL,2.4996247228363935e-17,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,nas_delay_per_scheduled_op,AUS,1.6994867910848545e-17,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,nas_delay_per_scheduled_op,CVG,8.039818020626995e-18,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,nas_delay_per_scheduled_op,RDU,6.763874118075907e-18,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,nas_delay_per_scheduled_op,IAD,1.376043376543385e-18,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,nas_delay_per_scheduled_op,MCO,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,nas_delay_per_scheduled_op,ATL,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,nas_delay_per_scheduled_op,DFW,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,nas_delay_per_scheduled_op,LAS,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,nas_delay_per_scheduled_op,IAH,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,nas_delay_per_scheduled_op,DTW,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,nas_delay_per_scheduled_op,SFO,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,nas_delay_per_scheduled_op,SEA,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,nas_delay_per_scheduled_op,BNA,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,nas_delay_per_scheduled_op,MSP,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,nas_delay_per_scheduled_op,MIA,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,nas_delay_per_scheduled_op,BWI,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,nas_delay_per_scheduled_op,SMF,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,nas_delay_per_scheduled_op,DAL,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,nas_delay_per_scheduled_op,HOU,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,nas_delay_per_scheduled_op,MSY,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,nas_delay_per_scheduled_op,SJC,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,nas_delay_per_scheduled_op,MCI,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,nas_delay_per_scheduled_op,SNA,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,nas_delay_per_scheduled_op,RSW,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,delay15_rate,BOS,0.33248052070661277,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,delay15_rate,BWI,0.1625735375504097,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,delay15_rate,IAH,0.13491212106407927,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,delay15_rate,DAL,0.12640594052082252,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,delay15_rate,CMH,0.11529177422783994,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,delay15_rate,SFO,0.06863890006278882,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,delay15_rate,HOU,0.026059068520431963,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,delay15_rate,PHL,0.022622760722847485,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,delay15_rate,IAD,0.011015376624166774,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,delay15_rate,LAS,1.6491983048724884e-16,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,delay15_rate,CLT,1.3138148927741638e-16,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,delay15_rate,ATL,1.0670965021716505e-16,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,delay15_rate,MSY,8.389353976174846e-17,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,delay15_rate,DFW,7.701880198728344e-17,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,delay15_rate,MDW,6.234471909645842e-17,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,delay15_rate,SAT,4.400404755012219e-17,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,delay15_rate,STL,4.2723649615764684e-17,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,delay15_rate,RDU,4.087930764160397e-17,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,delay15_rate,DTW,3.9236967866161475e-17,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,delay15_rate,PIT,3.674794504813389e-17,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,delay15_rate,TPA,2.850305443898969e-17,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,delay15_rate,SAN,2.6306502983227302e-17,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,delay15_rate,CLE,2.3499728676881607e-17,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,delay15_rate,MCO,2.3157184610111588e-17,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,delay15_rate,SNA,1.9342615303928667e-17,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,delay15_rate,SLC,1.3961581341869744e-17,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,delay15_rate,MIA,1.0280441046265707e-17,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,delay15_rate,HNL,3.444570675786879e-18,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,delay15_rate,IND,3.387918217045617e-18,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,delay15_rate,SJU,3.152220785004317e-18,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,delay15_rate,PDX,8.08256366588835e-19,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,delay15_rate,DCA,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,delay15_rate,SEA,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,delay15_rate,LAX,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,delay15_rate,DEN,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,delay15_rate,PHX,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,delay15_rate,ORD,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,delay15_rate,MSP,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,delay15_rate,AUS,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,delay15_rate,SMF,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,delay15_rate,FLL,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,delay15_rate,BNA,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,delay15_rate,MCI,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,delay15_rate,SJC,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,delay15_rate,OAK,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,delay15_rate,RSW,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,delay15_rate,CVG,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,nas_delay_per_scheduled_op,MCO,0.3761128371227466,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,nas_delay_per_scheduled_op,BOS,0.3203097581750408,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,nas_delay_per_scheduled_op,IAD,0.13566579463007675,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,nas_delay_per_scheduled_op,IAH,0.1066373343884726,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,nas_delay_per_scheduled_op,FLL,0.0494531836085073,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,nas_delay_per_scheduled_op,RSW,0.011821092075154804,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,nas_delay_per_scheduled_op,HNL,1.582432658908319e-16,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,nas_delay_per_scheduled_op,DFW,1.5500433843932847e-16,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,nas_delay_per_scheduled_op,ATL,1.4721047509411817e-16,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,nas_delay_per_scheduled_op,SEA,1.373226788644671e-16,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,nas_delay_per_scheduled_op,SAT,1.2072548981219432e-16,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,nas_delay_per_scheduled_op,CLT,7.913243665640845e-17,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,nas_delay_per_scheduled_op,BNA,7.501907019842646e-17,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,nas_delay_per_scheduled_op,DCA,6.042375314799779e-17,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,nas_delay_per_scheduled_op,MDW,4.4091552294284313e-17,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,nas_delay_per_scheduled_op,LAS,3.232464112811133e-17,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,nas_delay_per_scheduled_op,IND,2.5573689863825672e-17,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,nas_delay_per_scheduled_op,CMH,2.4541319064836822e-17,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,nas_delay_per_scheduled_op,HOU,2.1902553332839388e-17,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,nas_delay_per_scheduled_op,STL,2.068759712941505e-17,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,nas_delay_per_scheduled_op,ORD,1.7644208379770335e-17,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,nas_delay_per_scheduled_op,MSP,1.5960095832676526e-17,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,nas_delay_per_scheduled_op,DTW,1.513873473358109e-17,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,nas_delay_per_scheduled_op,CVG,1.2222768993649536e-17,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,nas_delay_per_scheduled_op,OAK,9.647106788713918e-18,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,nas_delay_per_scheduled_op,SFO,9.51307202588675e-18,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,nas_delay_per_scheduled_op,SNA,4.05433890199533e-18,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,nas_delay_per_scheduled_op,LAX,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,nas_delay_per_scheduled_op,DEN,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,nas_delay_per_scheduled_op,PHX,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,nas_delay_per_scheduled_op,MIA,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,nas_delay_per_scheduled_op,PDX,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,nas_delay_per_scheduled_op,SMF,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,nas_delay_per_scheduled_op,TPA,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,nas_delay_per_scheduled_op,DAL,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,nas_delay_per_scheduled_op,PHL,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,nas_delay_per_scheduled_op,BWI,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,nas_delay_per_scheduled_op,SAN,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,nas_delay_per_scheduled_op,AUS,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,nas_delay_per_scheduled_op,SLC,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,nas_delay_per_scheduled_op,MCI,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,nas_delay_per_scheduled_op,RDU,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,nas_delay_per_scheduled_op,MSY,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,nas_delay_per_scheduled_op,SJC,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,nas_delay_per_scheduled_op,PIT,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,nas_delay_per_scheduled_op,CLE,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,dep,nas_delay_per_scheduled_op,SJU,0.0,"Exclude NYC airports (JFK, LGA)"
+EWR,arr,delay15_rate,CMH,0.8153928001106375,Exclude nearby Northeast airports
+EWR,arr,delay15_rate,DEN,0.0916474509590875,Exclude nearby Northeast airports
+EWR,arr,delay15_rate,RDU,0.056586131130047,Exclude nearby Northeast airports
+EWR,arr,delay15_rate,DFW,0.014629224833302465,Exclude nearby Northeast airports
+EWR,arr,delay15_rate,SFO,0.014500811292008147,Exclude nearby Northeast airports
+EWR,arr,delay15_rate,SJU,0.007243581674916338,Exclude nearby Northeast airports
+EWR,arr,delay15_rate,PIT,2.184152112468116e-16,Exclude nearby Northeast airports
+EWR,arr,delay15_rate,TPA,1.1740556169386092e-16,Exclude nearby Northeast airports
+EWR,arr,delay15_rate,PDX,9.280172997351946e-17,Exclude nearby Northeast airports
+EWR,arr,delay15_rate,ORD,7.26086275897795e-17,Exclude nearby Northeast airports
+EWR,arr,delay15_rate,HNL,6.599136130588545e-17,Exclude nearby Northeast airports
+EWR,arr,delay15_rate,MCI,6.453601479322273e-17,Exclude nearby Northeast airports
+EWR,arr,delay15_rate,SAN,6.303983108214015e-17,Exclude nearby Northeast airports
+EWR,arr,delay15_rate,FLL,5.4454449540609553e-17,Exclude nearby Northeast airports
+EWR,arr,delay15_rate,SLC,5.230937651122593e-17,Exclude nearby Northeast airports
+EWR,arr,delay15_rate,SAT,5.1892807458696165e-17,Exclude nearby Northeast airports
+EWR,arr,delay15_rate,SMF,3.377272973830918e-17,Exclude nearby Northeast airports
+EWR,arr,delay15_rate,RSW,3.3769557992896315e-17,Exclude nearby Northeast airports
+EWR,arr,delay15_rate,STL,3.363558434426149e-17,Exclude nearby Northeast airports
+EWR,arr,delay15_rate,ATL,2.7849490638988425e-17,Exclude nearby Northeast airports
+EWR,arr,delay15_rate,CLE,2.2026680800552287e-17,Exclude nearby Northeast airports
+EWR,arr,delay15_rate,MCO,1.3474319375124623e-17,Exclude nearby Northeast airports
+EWR,arr,delay15_rate,LAX,8.298955517426617e-18,Exclude nearby Northeast airports
+EWR,arr,delay15_rate,DAL,3.83189871514714e-18,Exclude nearby Northeast airports
+EWR,arr,delay15_rate,PHX,2.0963400907011344e-18,Exclude nearby Northeast airports
+EWR,arr,delay15_rate,CLT,0.0,Exclude nearby Northeast airports
+EWR,arr,delay15_rate,SEA,0.0,Exclude nearby Northeast airports
+EWR,arr,delay15_rate,LAS,0.0,Exclude nearby Northeast airports
+EWR,arr,delay15_rate,MSP,0.0,Exclude nearby Northeast airports
+EWR,arr,delay15_rate,AUS,0.0,Exclude nearby Northeast airports
+EWR,arr,delay15_rate,IAH,0.0,Exclude nearby Northeast airports
+EWR,arr,delay15_rate,MIA,0.0,Exclude nearby Northeast airports
+EWR,arr,delay15_rate,BNA,0.0,Exclude nearby Northeast airports
+EWR,arr,delay15_rate,DTW,0.0,Exclude nearby Northeast airports
+EWR,arr,delay15_rate,MDW,0.0,Exclude nearby Northeast airports
+EWR,arr,delay15_rate,IND,0.0,Exclude nearby Northeast airports
+EWR,arr,delay15_rate,HOU,0.0,Exclude nearby Northeast airports
+EWR,arr,delay15_rate,MSY,0.0,Exclude nearby Northeast airports
+EWR,arr,delay15_rate,SJC,0.0,Exclude nearby Northeast airports
+EWR,arr,delay15_rate,SNA,0.0,Exclude nearby Northeast airports
+EWR,arr,delay15_rate,OAK,0.0,Exclude nearby Northeast airports
+EWR,arr,delay15_rate,CVG,0.0,Exclude nearby Northeast airports
+EWR,arr,nas_delay_per_scheduled_op,FLL,0.5429043699553007,Exclude nearby Northeast airports
+EWR,arr,nas_delay_per_scheduled_op,DEN,0.4267986922873134,Exclude nearby Northeast airports
+EWR,arr,nas_delay_per_scheduled_op,DFW,0.030296937757384824,Exclude nearby Northeast airports
+EWR,arr,nas_delay_per_scheduled_op,AUS,2.8817867022293374e-16,Exclude nearby Northeast airports
+EWR,arr,nas_delay_per_scheduled_op,CLT,1.8073387474804946e-16,Exclude nearby Northeast airports
+EWR,arr,nas_delay_per_scheduled_op,SJC,1.252048977417638e-16,Exclude nearby Northeast airports
+EWR,arr,nas_delay_per_scheduled_op,LAS,1.1941675323248895e-16,Exclude nearby Northeast airports
+EWR,arr,nas_delay_per_scheduled_op,IND,9.88905898882814e-17,Exclude nearby Northeast airports
+EWR,arr,nas_delay_per_scheduled_op,LAX,8.980704722079505e-17,Exclude nearby Northeast airports
+EWR,arr,nas_delay_per_scheduled_op,STL,6.501380998081021e-17,Exclude nearby Northeast airports
+EWR,arr,nas_delay_per_scheduled_op,MDW,5.663692113638401e-17,Exclude nearby Northeast airports
+EWR,arr,nas_delay_per_scheduled_op,BNA,4.689646905606443e-17,Exclude nearby Northeast airports
+EWR,arr,nas_delay_per_scheduled_op,SEA,4.399518827290754e-17,Exclude nearby Northeast airports
+EWR,arr,nas_delay_per_scheduled_op,SFO,4.373031911234943e-17,Exclude nearby Northeast airports
+EWR,arr,nas_delay_per_scheduled_op,SAT,3.983282826397041e-17,Exclude nearby Northeast airports
+EWR,arr,nas_delay_per_scheduled_op,CLE,3.7704346098324415e-17,Exclude nearby Northeast airports
+EWR,arr,nas_delay_per_scheduled_op,CVG,3.47609906450683e-17,Exclude nearby Northeast airports
+EWR,arr,nas_delay_per_scheduled_op,ATL,1.5470829157702773e-17,Exclude nearby Northeast airports
+EWR,arr,nas_delay_per_scheduled_op,MSP,1.3887530928876102e-17,Exclude nearby Northeast airports
+EWR,arr,nas_delay_per_scheduled_op,SNA,1.3311770521145528e-17,Exclude nearby Northeast airports
+EWR,arr,nas_delay_per_scheduled_op,RDU,1.2505645395553916e-17,Exclude nearby Northeast airports
+EWR,arr,nas_delay_per_scheduled_op,SLC,6.7901315433925096e-18,Exclude nearby Northeast airports
+EWR,arr,nas_delay_per_scheduled_op,PHX,2.3772314018278354e-18,Exclude nearby Northeast airports
+EWR,arr,nas_delay_per_scheduled_op,RSW,2.165887230860472e-18,Exclude nearby Northeast airports
+EWR,arr,nas_delay_per_scheduled_op,MCO,0.0,Exclude nearby Northeast airports
+EWR,arr,nas_delay_per_scheduled_op,ORD,0.0,Exclude nearby Northeast airports
+EWR,arr,nas_delay_per_scheduled_op,PDX,0.0,Exclude nearby Northeast airports
+EWR,arr,nas_delay_per_scheduled_op,SMF,0.0,Exclude nearby Northeast airports
+EWR,arr,nas_delay_per_scheduled_op,TPA,0.0,Exclude nearby Northeast airports
+EWR,arr,nas_delay_per_scheduled_op,DAL,0.0,Exclude nearby Northeast airports
+EWR,arr,nas_delay_per_scheduled_op,IAH,0.0,Exclude nearby Northeast airports
+EWR,arr,nas_delay_per_scheduled_op,DTW,0.0,Exclude nearby Northeast airports
+EWR,arr,nas_delay_per_scheduled_op,MIA,0.0,Exclude nearby Northeast airports
+EWR,arr,nas_delay_per_scheduled_op,SAN,0.0,Exclude nearby Northeast airports
+EWR,arr,nas_delay_per_scheduled_op,CMH,0.0,Exclude nearby Northeast airports
+EWR,arr,nas_delay_per_scheduled_op,MCI,0.0,Exclude nearby Northeast airports
+EWR,arr,nas_delay_per_scheduled_op,HOU,0.0,Exclude nearby Northeast airports
+EWR,arr,nas_delay_per_scheduled_op,MSY,0.0,Exclude nearby Northeast airports
+EWR,arr,nas_delay_per_scheduled_op,HNL,0.0,Exclude nearby Northeast airports
+EWR,arr,nas_delay_per_scheduled_op,PIT,0.0,Exclude nearby Northeast airports
+EWR,arr,nas_delay_per_scheduled_op,OAK,0.0,Exclude nearby Northeast airports
+EWR,arr,nas_delay_per_scheduled_op,SJU,0.0,Exclude nearby Northeast airports
+EWR,dep,delay15_rate,CMH,0.33664999814086194,Exclude nearby Northeast airports
+EWR,dep,delay15_rate,IAH,0.15335010279486866,Exclude nearby Northeast airports
+EWR,dep,delay15_rate,DAL,0.12593944058012937,Exclude nearby Northeast airports
+EWR,dep,delay15_rate,MCO,0.11212829164122508,Exclude nearby Northeast airports
+EWR,dep,delay15_rate,CLT,0.09979433013887812,Exclude nearby Northeast airports
+EWR,dep,delay15_rate,SFO,0.07000706947713344,Exclude nearby Northeast airports
+EWR,dep,delay15_rate,DEN,0.05275198203417622,Exclude nearby Northeast airports
+EWR,dep,delay15_rate,FLL,0.04937878519272636,Exclude nearby Northeast airports
+EWR,dep,delay15_rate,SEA,1.2086066064759417e-16,Exclude nearby Northeast airports
+EWR,dep,delay15_rate,DFW,1.04622696921682e-16,Exclude nearby Northeast airports
+EWR,dep,delay15_rate,ATL,1.0446044606784903e-16,Exclude nearby Northeast airports
+EWR,dep,delay15_rate,HNL,6.800460161195256e-17,Exclude nearby Northeast airports
+EWR,dep,delay15_rate,SJU,6.259165252295648e-17,Exclude nearby Northeast airports
+EWR,dep,delay15_rate,MSY,5.87656116238901e-17,Exclude nearby Northeast airports
+EWR,dep,delay15_rate,AUS,4.813199029640149e-17,Exclude nearby Northeast airports
+EWR,dep,delay15_rate,BNA,4.5450286698771353e-17,Exclude nearby Northeast airports
+EWR,dep,delay15_rate,HOU,3.796884307345428e-17,Exclude nearby Northeast airports
+EWR,dep,delay15_rate,SJC,3.070782291204629e-17,Exclude nearby Northeast airports
+EWR,dep,delay15_rate,LAS,2.6624839067615115e-17,Exclude nearby Northeast airports
+EWR,dep,delay15_rate,SMF,2.475401756911769e-17,Exclude nearby Northeast airports
+EWR,dep,delay15_rate,CVG,1.849687926510923e-17,Exclude nearby Northeast airports
+EWR,dep,delay15_rate,MIA,1.6868444171545174e-17,Exclude nearby Northeast airports
+EWR,dep,delay15_rate,CLE,1.4667613958333938e-17,Exclude nearby Northeast airports
+EWR,dep,delay15_rate,SNA,1.1193474533179946e-17,Exclude nearby Northeast airports
+EWR,dep,delay15_rate,STL,8.052707258436099e-18,Exclude nearby Northeast airports
+EWR,dep,delay15_rate,RDU,7.174379158931562e-18,Exclude nearby Northeast airports
+EWR,dep,delay15_rate,SAN,6.34098881320709e-18,Exclude nearby Northeast airports
+EWR,dep,delay15_rate,TPA,5.845635130565901e-18,Exclude nearby Northeast airports
+EWR,dep,delay15_rate,MDW,9.363616127959633e-19,Exclude nearby Northeast airports
+EWR,dep,delay15_rate,SLC,8.928748790428729e-19,Exclude nearby Northeast airports
+EWR,dep,delay15_rate,LAX,0.0,Exclude nearby Northeast airports
+EWR,dep,delay15_rate,PHX,0.0,Exclude nearby Northeast airports
+EWR,dep,delay15_rate,ORD,0.0,Exclude nearby Northeast airports
+EWR,dep,delay15_rate,DTW,0.0,Exclude nearby Northeast airports
+EWR,dep,delay15_rate,PDX,0.0,Exclude nearby Northeast airports
+EWR,dep,delay15_rate,MSP,0.0,Exclude nearby Northeast airports
+EWR,dep,delay15_rate,MCI,0.0,Exclude nearby Northeast airports
+EWR,dep,delay15_rate,IND,0.0,Exclude nearby Northeast airports
+EWR,dep,delay15_rate,SAT,0.0,Exclude nearby Northeast airports
+EWR,dep,delay15_rate,PIT,0.0,Exclude nearby Northeast airports
+EWR,dep,delay15_rate,RSW,0.0,Exclude nearby Northeast airports
+EWR,dep,delay15_rate,OAK,0.0,Exclude nearby Northeast airports
+EWR,dep,nas_delay_per_scheduled_op,MCO,0.46750397538791677,Exclude nearby Northeast airports
+EWR,dep,nas_delay_per_scheduled_op,DTW,0.14230378867617993,Exclude nearby Northeast airports
+EWR,dep,nas_delay_per_scheduled_op,IAH,0.12871149769271387,Exclude nearby Northeast airports
+EWR,dep,nas_delay_per_scheduled_op,PIT,0.10064777360831557,Exclude nearby Northeast airports
+EWR,dep,nas_delay_per_scheduled_op,RSW,0.08538420943509197,Exclude nearby Northeast airports
+EWR,dep,nas_delay_per_scheduled_op,FLL,0.06015744635118028,Exclude nearby Northeast airports
+EWR,dep,nas_delay_per_scheduled_op,ORD,0.011653484336836181,Exclude nearby Northeast airports
+EWR,dep,nas_delay_per_scheduled_op,CMH,0.0036378245117645804,Exclude nearby Northeast airports
+EWR,dep,nas_delay_per_scheduled_op,SMF,2.3931052452186267e-16,Exclude nearby Northeast airports
+EWR,dep,nas_delay_per_scheduled_op,ATL,1.7387892341236255e-16,Exclude nearby Northeast airports
+EWR,dep,nas_delay_per_scheduled_op,SJC,1.108054620280184e-16,Exclude nearby Northeast airports
+EWR,dep,nas_delay_per_scheduled_op,DEN,1.1050730643058489e-16,Exclude nearby Northeast airports
+EWR,dep,nas_delay_per_scheduled_op,CVG,8.30634389395456e-17,Exclude nearby Northeast airports
+EWR,dep,nas_delay_per_scheduled_op,TPA,7.047314121155769e-17,Exclude nearby Northeast airports
+EWR,dep,nas_delay_per_scheduled_op,SAT,6.628541032033244e-17,Exclude nearby Northeast airports
+EWR,dep,nas_delay_per_scheduled_op,RDU,4.2310989781246755e-17,Exclude nearby Northeast airports
+EWR,dep,nas_delay_per_scheduled_op,IND,4.053560872380174e-17,Exclude nearby Northeast airports
+EWR,dep,nas_delay_per_scheduled_op,DAL,3.913969842672666e-17,Exclude nearby Northeast airports
+EWR,dep,nas_delay_per_scheduled_op,OAK,1.7143946852427017e-17,Exclude nearby Northeast airports
+EWR,dep,nas_delay_per_scheduled_op,SLC,1.620882247865827e-17,Exclude nearby Northeast airports
+EWR,dep,nas_delay_per_scheduled_op,MSY,1.1180834903756749e-17,Exclude nearby Northeast airports
+EWR,dep,nas_delay_per_scheduled_op,LAX,7.752045533271346e-18,Exclude nearby Northeast airports
+EWR,dep,nas_delay_per_scheduled_op,CLE,7.657177843178864e-18,Exclude nearby Northeast airports
+EWR,dep,nas_delay_per_scheduled_op,SAN,4.6891743959998005e-18,Exclude nearby Northeast airports
+EWR,dep,nas_delay_per_scheduled_op,DFW,0.0,Exclude nearby Northeast airports
+EWR,dep,nas_delay_per_scheduled_op,CLT,0.0,Exclude nearby Northeast airports
+EWR,dep,nas_delay_per_scheduled_op,SEA,0.0,Exclude nearby Northeast airports
+EWR,dep,nas_delay_per_scheduled_op,LAS,0.0,Exclude nearby Northeast airports
+EWR,dep,nas_delay_per_scheduled_op,PHX,0.0,Exclude nearby Northeast airports
+EWR,dep,nas_delay_per_scheduled_op,AUS,0.0,Exclude nearby Northeast airports
+EWR,dep,nas_delay_per_scheduled_op,SFO,0.0,Exclude nearby Northeast airports
+EWR,dep,nas_delay_per_scheduled_op,MIA,0.0,Exclude nearby Northeast airports
+EWR,dep,nas_delay_per_scheduled_op,MSP,0.0,Exclude nearby Northeast airports
+EWR,dep,nas_delay_per_scheduled_op,BNA,0.0,Exclude nearby Northeast airports
+EWR,dep,nas_delay_per_scheduled_op,PDX,0.0,Exclude nearby Northeast airports
+EWR,dep,nas_delay_per_scheduled_op,STL,0.0,Exclude nearby Northeast airports
+EWR,dep,nas_delay_per_scheduled_op,MDW,0.0,Exclude nearby Northeast airports
+EWR,dep,nas_delay_per_scheduled_op,HOU,0.0,Exclude nearby Northeast airports
+EWR,dep,nas_delay_per_scheduled_op,MCI,0.0,Exclude nearby Northeast airports
+EWR,dep,nas_delay_per_scheduled_op,HNL,0.0,Exclude nearby Northeast airports
+EWR,dep,nas_delay_per_scheduled_op,SNA,0.0,Exclude nearby Northeast airports
+EWR,dep,nas_delay_per_scheduled_op,SJU,0.0,Exclude nearby Northeast airports
+EWR,arr,delay15_rate,RDU,0.6308279908307953,Exclude high-weight donor airports
+EWR,arr,delay15_rate,DCA,0.22062102796012303,Exclude high-weight donor airports
+EWR,arr,delay15_rate,AUS,0.14855098120908072,Exclude high-weight donor airports
+EWR,arr,delay15_rate,SLC,2.0860929516890013e-16,Exclude high-weight donor airports
+EWR,arr,delay15_rate,ORD,1.6343890744512232e-16,Exclude high-weight donor airports
+EWR,arr,delay15_rate,TPA,8.098530486709228e-17,Exclude high-weight donor airports
+EWR,arr,delay15_rate,DTW,7.760842105749625e-17,Exclude high-weight donor airports
+EWR,arr,delay15_rate,BNA,7.206666937027661e-17,Exclude high-weight donor airports
+EWR,arr,delay15_rate,MDW,6.054757509184074e-17,Exclude high-weight donor airports
+EWR,arr,delay15_rate,IND,5.3173672750884935e-17,Exclude high-weight donor airports
+EWR,arr,delay15_rate,SNA,5.037649360337974e-17,Exclude high-weight donor airports
+EWR,arr,delay15_rate,MSP,4.372693662314532e-17,Exclude high-weight donor airports
+EWR,arr,delay15_rate,ATL,3.3768313632946464e-17,Exclude high-weight donor airports
+EWR,arr,delay15_rate,SAN,3.369161446390586e-17,Exclude high-weight donor airports
+EWR,arr,delay15_rate,CLE,2.775475833228761e-17,Exclude high-weight donor airports
+EWR,arr,delay15_rate,SJU,1.7340637743711647e-17,Exclude high-weight donor airports
+EWR,arr,delay15_rate,LAX,1.1863767075826802e-17,Exclude high-weight donor airports
+EWR,arr,delay15_rate,MCI,6.751888403814018e-18,Exclude high-weight donor airports
+EWR,arr,delay15_rate,CVG,2.74380742326875e-18,Exclude high-weight donor airports
+EWR,arr,delay15_rate,CLT,0.0,Exclude high-weight donor airports
+EWR,arr,delay15_rate,LAS,0.0,Exclude high-weight donor airports
+EWR,arr,delay15_rate,SEA,0.0,Exclude high-weight donor airports
+EWR,arr,delay15_rate,PHX,0.0,Exclude high-weight donor airports
+EWR,arr,delay15_rate,STL,0.0,Exclude high-weight donor airports
+EWR,arr,delay15_rate,PDX,0.0,Exclude high-weight donor airports
+EWR,arr,delay15_rate,SMF,0.0,Exclude high-weight donor airports
+EWR,arr,delay15_rate,SJC,0.0,Exclude high-weight donor airports
+EWR,arr,delay15_rate,SAT,0.0,Exclude high-weight donor airports
+EWR,arr,nas_delay_per_scheduled_op,DCA,0.5875173188137389,Exclude high-weight donor airports
+EWR,arr,nas_delay_per_scheduled_op,AUS,0.41248268118626025,Exclude high-weight donor airports
+EWR,arr,nas_delay_per_scheduled_op,ORD,3.8917588837742666e-16,Exclude high-weight donor airports
+EWR,arr,nas_delay_per_scheduled_op,SLC,1.3710288658599836e-16,Exclude high-weight donor airports
+EWR,arr,nas_delay_per_scheduled_op,PDX,7.582166431455347e-17,Exclude high-weight donor airports
+EWR,arr,nas_delay_per_scheduled_op,MDW,6.056869295855881e-17,Exclude high-weight donor airports
+EWR,arr,nas_delay_per_scheduled_op,SMF,5.901246670409458e-17,Exclude high-weight donor airports
+EWR,arr,nas_delay_per_scheduled_op,STL,5.2578567332585025e-17,Exclude high-weight donor airports
+EWR,arr,nas_delay_per_scheduled_op,SJU,4.3664159424480955e-17,Exclude high-weight donor airports
+EWR,arr,nas_delay_per_scheduled_op,SNA,4.249265744702935e-17,Exclude high-weight donor airports
+EWR,arr,nas_delay_per_scheduled_op,CLE,4.232278272873524e-17,Exclude high-weight donor airports
+EWR,arr,nas_delay_per_scheduled_op,SAT,3.3913446465154793e-17,Exclude high-weight donor airports
+EWR,arr,nas_delay_per_scheduled_op,SJC,5.526928163615994e-18,Exclude high-weight donor airports
+EWR,arr,nas_delay_per_scheduled_op,MCI,1.4487091307975137e-18,Exclude high-weight donor airports
+EWR,arr,nas_delay_per_scheduled_op,BNA,0.0,Exclude high-weight donor airports
+EWR,arr,nas_delay_per_scheduled_op,SEA,0.0,Exclude high-weight donor airports
+EWR,arr,nas_delay_per_scheduled_op,LAS,0.0,Exclude high-weight donor airports
+EWR,arr,nas_delay_per_scheduled_op,LAX,0.0,Exclude high-weight donor airports
+EWR,arr,nas_delay_per_scheduled_op,PHX,0.0,Exclude high-weight donor airports
+EWR,arr,nas_delay_per_scheduled_op,CLT,0.0,Exclude high-weight donor airports
+EWR,arr,nas_delay_per_scheduled_op,ATL,0.0,Exclude high-weight donor airports
+EWR,arr,nas_delay_per_scheduled_op,MSP,0.0,Exclude high-weight donor airports
+EWR,arr,nas_delay_per_scheduled_op,DTW,0.0,Exclude high-weight donor airports
+EWR,arr,nas_delay_per_scheduled_op,SAN,0.0,Exclude high-weight donor airports
+EWR,arr,nas_delay_per_scheduled_op,RDU,0.0,Exclude high-weight donor airports
+EWR,arr,nas_delay_per_scheduled_op,TPA,0.0,Exclude high-weight donor airports
+EWR,arr,nas_delay_per_scheduled_op,IND,0.0,Exclude high-weight donor airports
+EWR,arr,nas_delay_per_scheduled_op,CVG,0.0,Exclude high-weight donor airports
+EWR,dep,delay15_rate,IND,0.20341023236447656,Exclude high-weight donor airports
+EWR,dep,delay15_rate,AUS,0.19514099308797433,Exclude high-weight donor airports
+EWR,dep,delay15_rate,DCA,0.1866771779126233,Exclude high-weight donor airports
+EWR,dep,delay15_rate,CLT,0.11033459782431858,Exclude high-weight donor airports
+EWR,dep,delay15_rate,BNA,0.10054873068684307,Exclude high-weight donor airports
+EWR,dep,delay15_rate,CLE,0.0973968076943035,Exclude high-weight donor airports
+EWR,dep,delay15_rate,SAN,0.039119405246929674,Exclude high-weight donor airports
+EWR,dep,delay15_rate,LAX,0.029490971707747015,Exclude high-weight donor airports
+EWR,dep,delay15_rate,STL,0.02187422101897612,Exclude high-weight donor airports
+EWR,dep,delay15_rate,SJU,0.007637271022023287,Exclude high-weight donor airports
+EWR,dep,delay15_rate,SNA,0.004941529381232297,Exclude high-weight donor airports
+EWR,dep,delay15_rate,LAS,0.003428062052552055,Exclude high-weight donor airports
+EWR,dep,delay15_rate,ATL,1.1325532004263613e-16,Exclude high-weight donor airports
+EWR,dep,delay15_rate,SAT,5.176876373555588e-17,Exclude high-weight donor airports
+EWR,dep,delay15_rate,SLC,3.936706301380041e-17,Exclude high-weight donor airports
+EWR,dep,delay15_rate,SEA,3.7840306157600786e-17,Exclude high-weight donor airports
+EWR,dep,delay15_rate,DTW,3.517857235233267e-17,Exclude high-weight donor airports
+EWR,dep,delay15_rate,MCI,3.4312601248982447e-17,Exclude high-weight donor airports
+EWR,dep,delay15_rate,CVG,6.04791504619663e-18,Exclude high-weight donor airports
+EWR,dep,delay15_rate,SJC,5.110039950403819e-18,Exclude high-weight donor airports
+EWR,dep,delay15_rate,PDX,3.1947798790067267e-18,Exclude high-weight donor airports
+EWR,dep,delay15_rate,RDU,6.939214669581097e-19,Exclude high-weight donor airports
+EWR,dep,delay15_rate,ORD,0.0,Exclude high-weight donor airports
+EWR,dep,delay15_rate,PHX,0.0,Exclude high-weight donor airports
+EWR,dep,delay15_rate,MSP,0.0,Exclude high-weight donor airports
+EWR,dep,delay15_rate,SMF,0.0,Exclude high-weight donor airports
+EWR,dep,delay15_rate,TPA,0.0,Exclude high-weight donor airports
+EWR,dep,delay15_rate,MDW,0.0,Exclude high-weight donor airports
+EWR,dep,nas_delay_per_scheduled_op,RDU,0.24752908968310053,Exclude high-weight donor airports
+EWR,dep,nas_delay_per_scheduled_op,DTW,0.22260955607705393,Exclude high-weight donor airports
+EWR,dep,nas_delay_per_scheduled_op,TPA,0.19261965133177134,Exclude high-weight donor airports
+EWR,dep,nas_delay_per_scheduled_op,CLE,0.18503980535281636,Exclude high-weight donor airports
+EWR,dep,nas_delay_per_scheduled_op,ATL,0.07176525741704605,Exclude high-weight donor airports
+EWR,dep,nas_delay_per_scheduled_op,SNA,0.05423618093606955,Exclude high-weight donor airports
+EWR,dep,nas_delay_per_scheduled_op,ORD,0.022844671684405723,Exclude high-weight donor airports
+EWR,dep,nas_delay_per_scheduled_op,SEA,0.003355787517735627,Exclude high-weight donor airports
+EWR,dep,nas_delay_per_scheduled_op,SMF,1.5200514458246765e-16,Exclude high-weight donor airports
+EWR,dep,nas_delay_per_scheduled_op,AUS,1.2538798124794854e-16,Exclude high-weight donor airports
+EWR,dep,nas_delay_per_scheduled_op,SJU,1.1526424346236514e-16,Exclude high-weight donor airports
+EWR,dep,nas_delay_per_scheduled_op,IND,1.09328236568007e-16,Exclude high-weight donor airports
+EWR,dep,nas_delay_per_scheduled_op,CVG,8.321251673826243e-17,Exclude high-weight donor airports
+EWR,dep,nas_delay_per_scheduled_op,SJC,6.62447527388643e-17,Exclude high-weight donor airports
+EWR,dep,nas_delay_per_scheduled_op,PDX,5.1418288030125023e-17,Exclude high-weight donor airports
+EWR,dep,nas_delay_per_scheduled_op,MDW,3.9898639947466545e-17,Exclude high-weight donor airports
+EWR,dep,nas_delay_per_scheduled_op,STL,3.938364391553593e-17,Exclude high-weight donor airports
+EWR,dep,nas_delay_per_scheduled_op,MSP,3.793352350983657e-17,Exclude high-weight donor airports
+EWR,dep,nas_delay_per_scheduled_op,MCI,2.0044187663825754e-17,Exclude high-weight donor airports
+EWR,dep,nas_delay_per_scheduled_op,PHX,0.0,Exclude high-weight donor airports
+EWR,dep,nas_delay_per_scheduled_op,BNA,0.0,Exclude high-weight donor airports
+EWR,dep,nas_delay_per_scheduled_op,SLC,0.0,Exclude high-weight donor airports
+EWR,dep,nas_delay_per_scheduled_op,LAX,0.0,Exclude high-weight donor airports
+EWR,dep,nas_delay_per_scheduled_op,DCA,0.0,Exclude high-weight donor airports
+EWR,dep,nas_delay_per_scheduled_op,LAS,0.0,Exclude high-weight donor airports
+EWR,dep,nas_delay_per_scheduled_op,CLT,0.0,Exclude high-weight donor airports
+EWR,dep,nas_delay_per_scheduled_op,SAN,0.0,Exclude high-weight donor airports
+EWR,dep,nas_delay_per_scheduled_op,SAT,0.0,Exclude high-weight donor airports
