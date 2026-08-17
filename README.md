@@ -17,6 +17,7 @@ The submitted article, article PDF, LaTeX source, Word submission files, cover l
 - `results/calendar_placebo_2024/`: same-calendar 2024 placebo results.
 - `results/transferability_checks/`: 50-airport benchmark outputs.
 - `results/tra_policy_experiments/`: synthetic-control recovery contrasts, donor-exclusion sensitivity, T-100 passenger and seat exposure, and delay-exposure accounting.
+- `results/operational_policy_mechanism/`: policy-mechanism bridge table linking capacity governance, peak-hour pressure, reliability, counterfactual checks, access, and carrier response.
 - `results/figure_previews/`: PNG previews of the figures generated from the public-data results.
 - `data/raw_bts_2025/` and `data/raw_bts_2024/`: placeholder folders for public BTS ZIP files. Raw BTS files are not committed.
 - `data/t100_domestic_segment/`: placeholder folder for public BTS T-100 Domestic Segment ZIP files. Raw T-100 files are not committed.
@@ -87,6 +88,7 @@ python src/add_control_set_sensitivity.py
 python src/add_calendar_placebo_2024.py --boot 499 --seed 20260520
 python src/add_tra_policy_experiments.py --top-n 50
 python src/add_tra_policy_exclusion_checks.py
+python src/add_operational_policy_mechanism_checks.py
 python src/make_figures.py
 ```
 
@@ -98,6 +100,7 @@ python src/analyze_hourly_schedule_pressure.py --months 4 5 6 --out results/hour
 python src/add_calendar_placebo_2024.py --smoke
 python src/add_tra_policy_experiments.py --smoke
 python src/add_tra_policy_exclusion_checks.py --smoke
+python src/add_operational_policy_mechanism_checks.py --smoke
 ```
 
 ## Scope
