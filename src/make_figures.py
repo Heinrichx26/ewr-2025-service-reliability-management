@@ -16,8 +16,8 @@ RESULT_DIR = PROJECT_ROOT / "results" / "ewr_2025_full"
 DID_DIR = PROJECT_ROOT / "results" / "did_robustness"
 CAL_PLACEBO_DIR = PROJECT_ROOT / "results" / "calendar_placebo_2024"
 TRA_DIR = PROJECT_ROOT / "results" / "tra_policy_experiments"
-FIGURE_DIR = PROJECT_ROOT / "article" / "elsarticle" / "figures"
 PREVIEW_DIR = PROJECT_ROOT / "results" / "figure_previews"
+FIGURE_DIR = PREVIEW_DIR
 
 
 PERIODS = [

@@ -12,7 +12,7 @@ from add_tra_policy_experiments import run_synthetic_placebos, synthetic_one
 
 BASE = Path(__file__).resolve().parents[1]
 OUT = BASE / "results" / "tra_policy_experiments"
-TABLES = BASE / "article" / "elsarticle" / "tables"
+TABLES = BASE / "results" / "tables"
 
 DAILY_FILE = OUT / "airport_side_daily_top_airports.csv"
 AIRPORTS_FILE = OUT / "synthetic_donor_airports.json"

@@ -16,7 +16,7 @@ RAW_BTS = BASE / "data" / "raw_bts_2025"
 RAW_T100 = BASE / "data" / "t100_domestic_segment"
 OUT = BASE / "results" / "tra_policy_experiments"
 OUT_SMOKE = BASE / "results" / "tra_policy_experiments_smoke"
-TABLES = BASE / "article" / "elsarticle" / "tables"
+TABLES = BASE / "results" / "tables"
 
 OTP_USECOLS = [
     "FlightDate",
@@ -534,12 +534,12 @@ def write_policy_tables(
     lines = [
         "\\begin{table}[!htbp]",
         "\\centering",
-        "\\footnotesize",
+        "\\small",
         "\\caption{Synthetic-control evidence for the post-intervention window}",
         "\\label{tab:synthetic-control}",
         "\\begin{tabular}{@{}llrrrrrr@{}}",
         "\\toprule",
-        "Outcome & Side & EWR $\\Delta$ & SC $\\Delta$ & Gap & Pre-RMSPE & Rank & $p$ \\\\",
+        "Outcome & Side & EWR $\\Delta$ & SC $\\Delta$ & Gap & Pre-fit & Rank & $p$ \\\\",
         "\\midrule",
     ]
     for _, row in selected.iterrows():
@@ -557,13 +557,12 @@ def write_policy_tables(
             rank_text = f"\\textbf{{{rank_text}}}"
         if pd.notna(row["p_value"]) and row["p_value"] <= 0.05:
             p_text = f"\\textbf{{{p_text}}}"
-        label = row["metric_label"]
-        if unit == "pp":
-            label = f"{label} (pp)"
-        elif unit == "min/op":
-            label = f"{label} (min/op)"
+        if row["metric"] == "scheduled_ops":
+            label = "Scheduled ops/day"
+        elif row["metric"] == "delay15_rate":
+            label = "D15+ rate (pp)"
         else:
-            label = f"{label} (ops/day)"
+            label = "NAS delay (min/op)"
         lines.append(
             f"{label} & {row['side'].upper()} & {fmt(obs)} & {fmt(syn)} & {gap_text} & "
             f"{fmt(pre_rmse)} & {rank_text} & {p_text} \\\\"
@@ -573,7 +572,7 @@ def write_policy_tables(
             "\\bottomrule",
             "\\end{tabular}",
             "\\vspace{2mm}",
-            "\\parbox{0.94\\linewidth}{\\footnotesize Notes: SC means synthetic control, RMSPE means root mean squared prediction error, and NAS means National Airspace System. The recovery gap is the EWR stress-to-interim change minus the synthetic EWR stress-to-interim change. Rank and $p$ come from donor-placebo recovery gaps among the 50-airport donor set. Bold values mark stronger EWR recovery for lower-is-better outcomes or top donor-placebo evidence.}",
+            "\\parbox{0.94\\linewidth}{\\small Notes: SC means synthetic control, D15+ means delay-15-plus, RMSPE means root mean squared prediction error, and NAS means National Airspace System. Pre-fit reports RMSPE. The gap is the EWR stress-to-interim change minus the synthetic EWR change. Rank and $p$ come from donor-placebo gaps among the 50-airport donor set. Bold values mark stronger EWR recovery for lower-is-better outcomes or top donor-placebo evidence.}",
             "\\end{table}",
         ]
     )
@@ -611,7 +610,7 @@ def write_policy_tables(
     lines = [
         "\\begin{table}[!htbp]",
         "\\centering",
-        "\\footnotesize",
+        "\\small",
         "\\caption{Synthetic-control pre-fit diagnostics and donor weights}",
         "\\label{tab:synthetic-donor-weights}",
         "\\begin{tabular}{@{}P{0.25\\linewidth}lrP{0.43\\linewidth}@{}}",
@@ -626,7 +625,7 @@ def write_policy_tables(
             "\\bottomrule",
             "\\end{tabular}",
             "\\vspace{2mm}",
-            "\\parbox{0.94\\linewidth}{\\footnotesize Notes: RMSPE means root mean squared prediction error, and NAS means National Airspace System. Donor weights are non-negative and sum to one for each side-outcome synthetic control.}",
+            "\\parbox{0.94\\linewidth}{\\small Notes: RMSPE means root mean squared prediction error, and NAS means National Airspace System. Donor weights are non-negative and sum to one for each side-outcome synthetic control.}",
             "\\end{table}",
         ]
     )
@@ -635,7 +634,7 @@ def write_policy_tables(
     lines = [
         "\\begin{table}[!htbp]",
         "\\centering",
-        "\\footnotesize",
+        "\\small",
         "\\caption{Monthly passenger and seat exposure around the capacity intervention}",
         "\\label{tab:t100-exposure}",
         "\\begin{tabular}{@{}lrrrr@{}}",
@@ -655,7 +654,7 @@ def write_policy_tables(
             "\\bottomrule",
             "\\end{tabular}",
             "\\vspace{2mm}",
-            "\\parbox{0.94\\linewidth}{\\footnotesize Notes: T-100 Domestic Segment data are monthly. Retention compares April with June 2025 for EWR domestic segments. Bold values mark the service-access indicators used in the policy interpretation.}",
+            "\\parbox{0.94\\linewidth}{\\small Notes: T-100 Domestic Segment data are monthly. Retention compares April with June 2025 for EWR domestic segments. Bold values mark the service-access indicators used in the policy interpretation.}",
             "\\end{table}",
         ]
     )
@@ -664,7 +663,7 @@ def write_policy_tables(
     lines = [
         "\\begin{table}[!htbp]",
         "\\centering",
-        "\\footnotesize",
+        "\\small",
         "\\caption{Delay-exposure accounting for the immediate intervention window}",
         "\\label{tab:externality-accounting}",
         "\\begin{tabular}{@{}lrrr@{}}",
@@ -683,7 +682,7 @@ def write_policy_tables(
             "\\bottomrule",
             "\\end{tabular}",
             "\\vspace{2mm}",
-            "\\parbox{0.94\\linewidth}{\\footnotesize Notes: NAS means National Airspace System. Passenger-minute exposure multiplies the observed EWR NAS-delay-minute reduction by the April--June 2025 T-100 passengers per performed domestic segment.}",
+            "\\parbox{0.94\\linewidth}{\\small Notes: NAS means National Airspace System. Passenger-minute exposure multiplies the observed EWR NAS-delay-minute reduction by the April--June 2025 T-100 passengers per performed domestic segment.}",
             "\\end{table}",
         ]
     )
