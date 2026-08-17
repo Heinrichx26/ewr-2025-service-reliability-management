@@ -1,0 +1,29 @@
+# Raw public data files are downloaded by users when they rerun the workflow.
+data/raw_bts_2025/*.zip
+data/raw_bts_2025/*.csv
+data/raw_bts_2024/*.zip
+data/raw_bts_2024/*.csv
+data/opsnet/*.html
+
+# Submitted article and publisher/submission materials are not part of this repository.
+article/
+*.tex
+*.bib
+*.bbl
+*.pdf
+*.doc
+*.docx
+*.ppt
+*.pptx
+
+# Local caches and temporary files.
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db
+
+# Local render and layout checks.
+results/layout_check*/
+results/pdf_previews/
+results/submission_materials_render*/

@@ -1,0 +1,7 @@
+window,side,metric,metric_label,unit,weather_adjusted,coef,ci_low,ci_high
+main,arr,cancel_rate,Cancellation rate,pp,False,-0.04495097913321271,-0.0776178331468563,-0.013416116386304104
+main,arr,delay15_rate,Delay-15-plus rate,pp,False,-0.22100259590413016,-0.36474294013958825,0.004740034901155677
+main,arr,nas_delay_per_scheduled_op,NAS delay,min,False,-28.910810334848968,-41.15643828603182,-5.572875796958729
+main,dep,cancel_rate,Cancellation rate,pp,False,-0.04663491617237991,-0.08144870451674414,-0.01401377626254027
+main,dep,delay15_rate,Delay-15-plus rate,pp,False,-0.15879202342804383,-0.2631079742541144,-0.03409071027206574
+main,dep,nas_delay_per_scheduled_op,NAS delay,min,False,-3.7623537891124763,-7.2447107846846,0.0

@@ -1,0 +1,17 @@
+window,side,metric,metric_label,unit,weather_adjusted,coef,ci_low,ci_high
+main,arr,scheduled_ops,Scheduled ops/day,ops,False,-37.36919459141744,-53.01635487528355,-20.36150539275615
+main,arr,cancel_rate,Cancellation rate,pp,True,-0.031022456093412594,-0.06585795361246724,0.00040237548650274375
+main,arr,delay15_rate,Delay-15-plus rate,pp,True,-0.16015916468851027,-0.29445010383490927,0.02048855600589346
+main,arr,nas_delay_per_scheduled_op,NAS delay,min,True,-23.87749198190363,-36.45399999567936,-5.528732951637005
+main,dep,scheduled_ops,Scheduled ops/day,ops,False,-37.69417989418065,-54.56396774521802,-19.833849664812067
+main,dep,cancel_rate,Cancellation rate,pp,True,-0.046196294737099255,-0.08001796671982093,-0.013591797409341978
+main,dep,delay15_rate,Delay-15-plus rate,pp,True,-0.1565070173625127,-0.2557189340456176,-0.03899267725770691
+main,dep,nas_delay_per_scheduled_op,NAS delay,min,True,-3.653424839886443,-6.5501954125817585,-0.3112469640717001
+pre_stress_placebo,arr,scheduled_ops,Scheduled ops/day,ops,False,-28.50464432686713,-46.77564501531559,-13.584601673608763
+pre_stress_placebo,arr,cancel_rate,Cancellation rate,pp,True,0.0026791036472136624,-0.005257025317563353,0.012171533451364472
+pre_stress_placebo,arr,delay15_rate,Delay-15-plus rate,pp,True,0.010200159130336362,-0.041508039345245405,0.06248917985728622
+pre_stress_placebo,arr,nas_delay_per_scheduled_op,NAS delay,min,True,-0.24229371333679606,-3.182866011871225,2.197545511815345
+pre_stress_placebo,dep,scheduled_ops,Scheduled ops/day,ops,False,-28.225514403292877,-45.78034995894868,-10.509876202733771
+pre_stress_placebo,dep,cancel_rate,Cancellation rate,pp,True,0.002048013943665629,-0.0025574543890181174,0.008096681538574018
+pre_stress_placebo,dep,delay15_rate,Delay-15-plus rate,pp,True,-0.005224060235140162,-0.04184144454370329,0.03098122154811777
+pre_stress_placebo,dep,nas_delay_per_scheduled_op,NAS delay,min,True,-0.24945079348690768,-1.6032712356279883,1.0782988658143673

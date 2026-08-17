@@ -1,0 +1,172 @@
+{
+  "months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "airport_count": 10,
+  "control_airports": [
+    "JFK",
+    "LGA",
+    "BOS",
+    "PHL",
+    "IAD",
+    "DCA",
+    "BWI",
+    "ATL",
+    "ORD"
+  ],
+  "periods": {
+    "pre_20250101_0414": "Baseline",
+    "stress_20250415_0519": "Stress",
+    "interim_20250520_0615": "Interim order",
+    "cap_20250616_1025": "Operating limit",
+    "extension_20251026_1231": "Extension"
+  },
+  "rows": {
+    "airport_side_daily": 7300,
+    "airport_side_period_summary": 100,
+    "ewr_carrier_period_summary": 102
+  },
+  "stress_to_interim_core_result": [
+    {
+      "metric": "ops_per_day",
+      "metric_label": "Ops/day",
+      "side": "arr",
+      "base_period": "stress_20250415_0519",
+      "compare_period": "interim_20250520_0615",
+      "ewr_delta": -28.197883597883617,
+      "control_mean_delta": 9.171310993533211,
+      "ewr_minus_control_delta": -37.36919459141683
+    },
+    {
+      "metric": "ops_per_day",
+      "metric_label": "Ops/day",
+      "side": "dep",
+      "base_period": "stress_20250415_0519",
+      "compare_period": "interim_20250520_0615",
+      "ewr_delta": -28.471957671957682,
+      "control_mean_delta": 9.222222222222229,
+      "ewr_minus_control_delta": -37.69417989417991
+    },
+    {
+      "metric": "cancel_rate",
+      "metric_label": "Cancel. rate",
+      "side": "arr",
+      "base_period": "stress_20250415_0519",
+      "compare_period": "interim_20250520_0615",
+      "ewr_delta": -0.04761892540079964,
+      "control_mean_delta": -0.0011207587531565355,
+      "ewr_minus_control_delta": -0.046498166647643106
+    },
+    {
+      "metric": "cancel_rate",
+      "metric_label": "Cancel. rate",
+      "side": "dep",
+      "base_period": "stress_20250415_0519",
+      "compare_period": "interim_20250520_0615",
+      "ewr_delta": -0.04952659211886371,
+      "control_mean_delta": -0.0013030550782029198,
+      "ewr_minus_control_delta": -0.04822353704066079
+    },
+    {
+      "metric": "delay15_rate",
+      "metric_label": "Delay-15+ rate",
+      "side": "arr",
+      "base_period": "stress_20250415_0519",
+      "compare_period": "interim_20250520_0615",
+      "ewr_delta": -0.21247991465813243,
+      "control_mean_delta": 0.004755872181999737,
+      "ewr_minus_control_delta": -0.21723578684013217
+    },
+    {
+      "metric": "delay15_rate",
+      "metric_label": "Delay-15+ rate",
+      "side": "dep",
+      "base_period": "stress_20250415_0519",
+      "compare_period": "interim_20250520_0615",
+      "ewr_delta": -0.1387939586476291,
+      "control_mean_delta": 0.017619792678914854,
+      "ewr_minus_control_delta": -0.15641375132654398
+    },
+    {
+      "metric": "nas_delay_per_scheduled_op",
+      "metric_label": "NAS min/op",
+      "side": "arr",
+      "base_period": "stress_20250415_0519",
+      "compare_period": "interim_20250520_0615",
+      "ewr_delta": -30.111379583263385,
+      "control_mean_delta": -0.7061033815098364,
+      "ewr_minus_control_delta": -29.405276201753548
+    },
+    {
+      "metric": "nas_delay_per_scheduled_op",
+      "metric_label": "NAS min/op",
+      "side": "dep",
+      "base_period": "stress_20250415_0519",
+      "compare_period": "interim_20250520_0615",
+      "ewr_delta": -3.5591770132629863,
+      "control_mean_delta": 0.24798684037500138,
+      "ewr_minus_control_delta": -3.8071638536379875
+    }
+  ],
+  "placebo_rank_for_ewr": [
+    {
+      "metric": "cancel_rate",
+      "side": "arr",
+      "pseudo_treated_airport": "EWR",
+      "treated_minus_control_delta": -0.046498166647643106,
+      "rank_most_negative": 1,
+      "airport_count": 10
+    },
+    {
+      "metric": "cancel_rate",
+      "side": "dep",
+      "pseudo_treated_airport": "EWR",
+      "treated_minus_control_delta": -0.04822353704066079,
+      "rank_most_negative": 1,
+      "airport_count": 10
+    },
+    {
+      "metric": "delay15_rate",
+      "side": "arr",
+      "pseudo_treated_airport": "EWR",
+      "treated_minus_control_delta": -0.21723578684013217,
+      "rank_most_negative": 1,
+      "airport_count": 10
+    },
+    {
+      "metric": "delay15_rate",
+      "side": "dep",
+      "pseudo_treated_airport": "EWR",
+      "treated_minus_control_delta": -0.15641375132654398,
+      "rank_most_negative": 1,
+      "airport_count": 10
+    },
+    {
+      "metric": "nas_delay_per_scheduled_op",
+      "side": "arr",
+      "pseudo_treated_airport": "EWR",
+      "treated_minus_control_delta": -29.405276201753548,
+      "rank_most_negative": 1,
+      "airport_count": 10
+    },
+    {
+      "metric": "nas_delay_per_scheduled_op",
+      "side": "dep",
+      "pseudo_treated_airport": "EWR",
+      "treated_minus_control_delta": -3.8071638536379875,
+      "rank_most_negative": 1,
+      "airport_count": 10
+    }
+  ]
+}

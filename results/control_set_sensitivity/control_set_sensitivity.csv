@@ -1,0 +1,31 @@
+control_set,metric,metric_label,side,airport_count,ewr_delta,control_mean_delta,ewr_minus_control_delta
+All controls,cancel_rate,Cancellation rate,arr,9,-0.047618925400799594,-0.001120758753156522,-0.04649816664764307
+All controls,cancel_rate,Cancellation rate,dep,9,-0.0495265921188638,-0.0013030550782029333,-0.04822353704066087
+Exclude New York City airports,cancel_rate,Cancellation rate,arr,7,-0.047618925400799594,-0.0002808011611206285,-0.047338124239678966
+Exclude New York City airports,cancel_rate,Cancellation rate,dep,7,-0.0495265921188638,-0.0005924045813282001,-0.0489341875375356
+Regional controls outside New York City,cancel_rate,Cancellation rate,arr,5,-0.047618925400799594,-0.0008685433489954998,-0.046750382051804096
+Regional controls outside New York City,cancel_rate,Cancellation rate,dep,5,-0.0495265921188638,-0.0012419353427862404,-0.04828465677607756
+Large hubs only,cancel_rate,Cancellation rate,arr,2,-0.047618925400799594,0.0011885543085665498,-0.04880747970936614
+Large hubs only,cancel_rate,Cancellation rate,dep,2,-0.0495265921188638,0.0010314223223169,-0.0505580144411807
+Exclude large hubs,cancel_rate,Cancellation rate,arr,7,-0.047618925400799594,-0.0017805624850773998,-0.04583836291572219
+Exclude large hubs,cancel_rate,Cancellation rate,dep,7,-0.0495265921188638,-0.0019700486212086,-0.0475565434976552
+All controls,delay15_rate,Delay-15-plus rate,arr,9,-0.21247991465813248,0.0047558721819997525,-0.21723578684013223
+All controls,delay15_rate,Delay-15-plus rate,dep,9,-0.1387939586476291,0.017619792678914874,-0.15641375132654398
+Exclude New York City airports,delay15_rate,Delay-15-plus rate,arr,7,-0.21247991465813248,0.015717227051178007,-0.2281971417093105
+Exclude New York City airports,delay15_rate,Delay-15-plus rate,dep,7,-0.1387939586476291,0.022556564589945777,-0.1613505232375749
+Regional controls outside New York City,delay15_rate,Delay-15-plus rate,arr,5,-0.21247991465813248,0.007291525820285405,-0.2197714404784179
+Regional controls outside New York City,delay15_rate,Delay-15-plus rate,dep,5,-0.1387939586476291,0.01060574119952773,-0.14939969984715684
+Large hubs only,delay15_rate,Delay-15-plus rate,arr,2,-0.21247991465813248,0.03678148012840951,-0.249261394786542
+Large hubs only,delay15_rate,Delay-15-plus rate,dep,2,-0.1387939586476291,0.05243362306599089,-0.19122758171362
+Exclude large hubs,delay15_rate,Delay-15-plus rate,arr,7,-0.21247991465813248,-0.004394301516974465,-0.20808561314115803
+Exclude large hubs,delay15_rate,Delay-15-plus rate,dep,7,-0.1387939586476291,0.0076729839968931535,-0.14646694264452226
+All controls,nas_delay_per_scheduled_op,NAS delay,arr,9,-30.111379583263393,-0.7061033815098364,-29.405276201753555
+All controls,nas_delay_per_scheduled_op,NAS delay,dep,9,-3.5591770132629863,0.24798684037500132,-3.8071638536379875
+Exclude New York City airports,nas_delay_per_scheduled_op,NAS delay,arr,7,-30.111379583263393,0.26886270044842503,-30.38024228371182
+Exclude New York City airports,nas_delay_per_scheduled_op,NAS delay,dep,7,-3.5591770132629863,0.20142487549740654,-3.7606018887603927
+Regional controls outside New York City,nas_delay_per_scheduled_op,NAS delay,arr,5,-30.111379583263393,-0.1083910224189144,-30.00298856084448
+Regional controls outside New York City,nas_delay_per_scheduled_op,NAS delay,dep,5,-3.5591770132629863,0.5169113715781791,-4.0760883848411655
+Large hubs only,nas_delay_per_scheduled_op,NAS delay,arr,2,-30.111379583263393,1.2119970076167736,-31.323376590880166
+Large hubs only,nas_delay_per_scheduled_op,NAS delay,dep,2,-3.5591770132629863,-0.587291364704525,-2.9718856485584615
+Exclude large hubs,nas_delay_per_scheduled_op,NAS delay,arr,7,-30.111379583263393,-1.2541320641174392,-28.857247519145954
+Exclude large hubs,nas_delay_per_scheduled_op,NAS delay,dep,7,-3.5591770132629863,0.4866377561120089,-4.045814769374995

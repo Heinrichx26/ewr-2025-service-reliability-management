@@ -1,0 +1,25 @@
+﻿{
+  "months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "opsnet_source": "data\\opsnet\\atads_opsnet_ewr_2025_01_12.html",
+  "outputs": [
+    "results/public_data_validation_checks/short_window_summary.csv",
+    "results/public_data_validation_checks/hourly_upper_tail_summary.csv",
+    "results/public_data_validation_checks/opsnet_bts_monthly_validation.csv"
+  ],
+  "coverage_ratio_mean": 0.6056122824009128,
+  "coverage_ratio_min": 0.5766833781126223,
+  "coverage_ratio_max": 0.635063866109807
+}

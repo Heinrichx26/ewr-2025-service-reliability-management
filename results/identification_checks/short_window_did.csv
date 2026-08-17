@@ -1,0 +1,17 @@
+window,side,metric,metric_label,unit,coef,ci_low,ci_high
+May 20--Jun 2,arr,scheduled_ops,Scheduled ops/day,ops,-28.98412698412613,-51.33358221337337,0.0
+May 20--Jun 2,arr,cancel_rate,Cancellation rate,pp,-0.027924012969767067,-0.06565341874997255,0.0029868281621592183
+May 20--Jun 2,arr,delay15_rate,Delay-15-plus rate,pp,-0.06241859701857293,-0.19828422941154544,0.09625780618623356
+May 20--Jun 2,arr,nas_delay_per_scheduled_op,NAS delay,min,-16.133093015976787,-32.49214834838251,0.35522673115004966
+May 20--Jun 2,dep,scheduled_ops,Scheduled ops/day,ops,-28.871428571427913,-52.54690359477085,-6.915951417003933
+May 20--Jun 2,dep,cancel_rate,Cancellation rate,pp,-0.04297386952248136,-0.07669719389651362,0.0
+May 20--Jun 2,dep,delay15_rate,Delay-15-plus rate,pp,-0.10405944730374245,-0.20821634950864137,-0.007824803712672898
+May 20--Jun 2,dep,nas_delay_per_scheduled_op,NAS delay,min,-2.501228422012215,-7.21238640427888,0.7714727082025085
+Jun 3--Jun 15,arr,scheduled_ops,Scheduled ops/day,ops,-46.39926739926671,-57.80451568059167,0.0
+Jun 3--Jun 15,arr,cancel_rate,Cancellation rate,pp,-0.030210520815738412,-0.06393920120436009,0.0
+Jun 3--Jun 15,arr,delay15_rate,Delay-15-plus rate,pp,-0.2557090119837386,-0.31422573401975906,0.0
+Jun 3--Jun 15,arr,nas_delay_per_scheduled_op,NAS delay,min,-30.879863786790857,-39.255210091261155,0.0
+Jun 3--Jun 15,dep,scheduled_ops,Scheduled ops/day,ops,-47.19560439560379,-58.66995998399309,0.0
+Jun 3--Jun 15,dep,cancel_rate,Cancellation rate,pp,-0.049545991087668335,-0.0836960649247186,0.0
+Jun 3--Jun 15,dep,delay15_rate,Delay-15-plus rate,pp,-0.21290749432769818,-0.2838678633864075,0.0
+Jun 3--Jun 15,dep,nas_delay_per_scheduled_op,NAS delay,min,-4.87462006993292,-7.7093136596176475,0.0

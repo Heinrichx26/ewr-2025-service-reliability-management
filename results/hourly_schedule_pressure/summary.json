@@ -1,0 +1,27 @@
+{
+  "months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "rows": {
+    "hourly_schedule_pressure": 6596,
+    "hourly_schedule_pressure_summary": 6,
+    "hourly_schedule_pressure_by_hour": 102
+  },
+  "period_targets": {
+    "stress_20250415_0519": 28,
+    "interim_20250520_0615": 28,
+    "cap_20250616_1025": 34
+  },
+  "facilitated_hours": "06:00-22:59"
+}

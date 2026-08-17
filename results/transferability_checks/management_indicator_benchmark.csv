@@ -1,0 +1,13 @@
+side,indicator,unit,ewr_value,peer_median,ewr_rank,rank_direction
+arr,Stress ops/day,ops,304.45714285714286,247.11428571428573,20/50,highest is strongest
+arr,Dominant carrier share,pct,0.5742304804804805,0.395040942833091,14/50,highest is strongest
+arr,Weekly market retention,pct,0.9852941176470589,1.0,31/50,highest is strongest
+arr,Ops/day change,ops,-28.197883597883617,3.0846560846561033,2/50,lowest is strongest
+arr,Delay-15+ change,pp,-0.21247991465813243,0.03237046063006846,1/50,lowest is strongest
+arr,NAS min/op change,min,-30.111379583263385,0.2696206483853142,1/50,lowest is strongest
+dep,Stress ops/day,ops,304.65714285714284,246.97142857142856,20/50,highest is strongest
+dep,Dominant carrier share,pct,0.5747913345212416,0.3944694828508135,14/50,highest is strongest
+dep,Weekly market retention,pct,0.9850746268656716,1.0,31/50,highest is strongest
+dep,Ops/day change,ops,-28.471957671957682,3.0846560846561033,2/50,lowest is strongest
+dep,Delay-15+ change,pp,-0.1387939586476291,0.03614729182717785,1/50,lowest is strongest
+dep,NAS min/op change,min,-3.5591770132629863,0.01929126865887998,1/50,lowest is strongest
