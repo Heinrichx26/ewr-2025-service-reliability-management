@@ -481,6 +481,7 @@ def fmt(value: float, digits: int = 1) -> str:
 def write_policy_tables(
     synthetic_summary: pd.DataFrame,
     synthetic_placebo: pd.DataFrame,
+    synthetic_weights: pd.DataFrame,
     t100_summary: pd.DataFrame,
     externality: pd.DataFrame,
 ) -> None:
@@ -516,40 +517,120 @@ def write_policy_tables(
         else np.nan,
         axis=1,
     )
+    selected["p_value"] = selected.apply(
+        lambda r: synthetic_placebo[
+            (synthetic_placebo["treated_airport"] == "EWR")
+            & (synthetic_placebo["side"] == r["side"])
+            & (synthetic_placebo["metric"] == r["metric"])
+        ]["permutation_p_recovery_lower_or_equal"].iloc[0]
+        if not synthetic_placebo[
+            (synthetic_placebo["treated_airport"] == "EWR")
+            & (synthetic_placebo["side"] == r["side"])
+            & (synthetic_placebo["metric"] == r["metric"])
+        ].empty
+        else np.nan,
+        axis=1,
+    )
     lines = [
         "\\begin{table}[!htbp]",
         "\\centering",
         "\\footnotesize",
         "\\caption{Synthetic-control evidence for the post-intervention window}",
         "\\label{tab:synthetic-control}",
-        "\\begin{tabular}{@{}llrrr@{}}",
+        "\\begin{tabular}{@{}llrrrrrr@{}}",
         "\\toprule",
-        "Outcome & Side & Recovery gap & EWR change & Synthetic change \\\\",
+        "Outcome & Side & EWR $\\Delta$ & SC $\\Delta$ & Gap & Pre-RMSPE & Rank & $p$ \\\\",
         "\\midrule",
     ]
     for _, row in selected.iterrows():
         unit = row["unit"]
         gap = row["recovery_gap"] * 100 if unit == "pp" else row["recovery_gap"]
-        gap_text = f"{fmt(gap)} {'pp' if unit == 'pp' else unit}"
+        gap_text = f"{fmt(gap)}"
         if LOWER_IS_BETTER[row["metric"]] and row["recovery_gap"] < 0:
             gap_text = f"\\textbf{{{gap_text}}}"
         obs = row["observed_change"] * 100 if unit == "pp" else row["observed_change"]
         syn = row["synthetic_change"] * 100 if unit == "pp" else row["synthetic_change"]
-        obs_text = f"{fmt(obs)} {'pp' if unit == 'pp' else unit}"
-        syn_text = f"{fmt(syn)} {'pp' if unit == 'pp' else unit}"
+        pre_rmse = row["pre_rmse"] * 100 if unit == "pp" else row["pre_rmse"]
+        rank_text = f"{int(row['rank'])}/{int(row['airports'])}" if pd.notna(row["rank"]) else "--"
+        p_text = fmt(row["p_value"], 2)
+        if pd.notna(row["rank"]) and int(row["rank"]) == 1:
+            rank_text = f"\\textbf{{{rank_text}}}"
+        if pd.notna(row["p_value"]) and row["p_value"] <= 0.05:
+            p_text = f"\\textbf{{{p_text}}}"
+        label = row["metric_label"]
+        if unit == "pp":
+            label = f"{label} (pp)"
+        elif unit == "min/op":
+            label = f"{label} (min/op)"
+        else:
+            label = f"{label} (ops/day)"
         lines.append(
-            f"{row['metric_label']} & {row['side'].upper()} & {gap_text} & {obs_text} & {syn_text} \\\\"
+            f"{label} & {row['side'].upper()} & {fmt(obs)} & {fmt(syn)} & {gap_text} & "
+            f"{fmt(pre_rmse)} & {rank_text} & {p_text} \\\\"
         )
     lines.extend(
         [
             "\\bottomrule",
             "\\end{tabular}",
             "\\vspace{2mm}",
-            "\\parbox{0.94\\linewidth}{\\footnotesize Notes: The recovery gap is the EWR stress-to-interim change minus the synthetic EWR stress-to-interim change. Stress is April 15--May 19, and interim is May 20--June 15, 2025. Bold values mark stronger recovery at EWR than in the synthetic counterfactual.}",
+            "\\parbox{0.94\\linewidth}{\\footnotesize Notes: SC means synthetic control, RMSPE means root mean squared prediction error, and NAS means National Airspace System. The recovery gap is the EWR stress-to-interim change minus the synthetic EWR stress-to-interim change. Rank and $p$ come from donor-placebo recovery gaps among the 50-airport donor set. Bold values mark stronger EWR recovery for lower-is-better outcomes or top donor-placebo evidence.}",
             "\\end{table}",
         ]
     )
     (TABLES / "tab_synthetic_control.tex").write_text("\n".join(lines), encoding="utf-8")
+
+    donor_rows = []
+    donor_metrics = ["scheduled_ops", "delay15_rate", "nas_delay_per_scheduled_op"]
+    for _, row in selected[selected["metric"].isin(donor_metrics)].iterrows():
+        donors = synthetic_weights[
+            (synthetic_weights["treated_airport"] == "EWR")
+            & (synthetic_weights["side"] == row["side"])
+            & (synthetic_weights["metric"] == row["metric"])
+            & (synthetic_weights["weight"] > 0.01)
+        ].sort_values("weight", ascending=False)
+        donor_text = "; ".join(
+            f"{donor.donor_airport} {100 * donor.weight:.1f}\\%" for donor in donors.itertuples(index=False)
+        )
+        unit = row["unit"]
+        pre_rmse = row["pre_rmse"] * 100 if unit == "pp" else row["pre_rmse"]
+        label = row["metric_label"]
+        if unit == "pp":
+            label = f"{label} (pp)"
+        elif unit == "min/op":
+            label = f"{label} (min/op)"
+        else:
+            label = f"{label} (ops/day)"
+        donor_rows.append(
+            {
+                "label": label,
+                "side": row["side"].upper(),
+                "pre_rmse": pre_rmse,
+                "donors": donor_text,
+            }
+        )
+    lines = [
+        "\\begin{table}[!htbp]",
+        "\\centering",
+        "\\footnotesize",
+        "\\caption{Synthetic-control pre-fit diagnostics and donor weights}",
+        "\\label{tab:synthetic-donor-weights}",
+        "\\begin{tabular}{@{}P{0.25\\linewidth}lrP{0.43\\linewidth}@{}}",
+        "\\toprule",
+        "Outcome & Side & Pre-RMSPE & Donors with weight above 1\\% \\\\",
+        "\\midrule",
+    ]
+    for row in donor_rows:
+        lines.append(f"{row['label']} & {row['side']} & {fmt(row['pre_rmse'])} & {row['donors']} \\\\")
+    lines.extend(
+        [
+            "\\bottomrule",
+            "\\end{tabular}",
+            "\\vspace{2mm}",
+            "\\parbox{0.94\\linewidth}{\\footnotesize Notes: RMSPE means root mean squared prediction error, and NAS means National Airspace System. Donor weights are non-negative and sum to one for each side-outcome synthetic control.}",
+            "\\end{table}",
+        ]
+    )
+    (TABLES / "tab_synthetic_donor_weights.tex").write_text("\n".join(lines), encoding="utf-8")
 
     lines = [
         "\\begin{table}[!htbp]",
@@ -669,7 +750,7 @@ def main() -> None:
     write_summary(out_dir, synthetic_summary, t100_summary, externality)
 
     if not args.smoke:
-        write_policy_tables(synthetic_summary, synthetic_placebo, t100_summary, externality)
+        write_policy_tables(synthetic_summary, synthetic_placebo, synthetic_weights, t100_summary, externality)
 
 
 if __name__ == "__main__":

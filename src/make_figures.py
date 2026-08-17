@@ -16,7 +16,7 @@ RESULT_DIR = PROJECT_ROOT / "results" / "ewr_2025_full"
 DID_DIR = PROJECT_ROOT / "results" / "did_robustness"
 CAL_PLACEBO_DIR = PROJECT_ROOT / "results" / "calendar_placebo_2024"
 TRA_DIR = PROJECT_ROOT / "results" / "tra_policy_experiments"
-FIGURE_DIR = PROJECT_ROOT / "results" / "figure_pdfs"
+FIGURE_DIR = PROJECT_ROOT / "article" / "elsarticle" / "figures"
 PREVIEW_DIR = PROJECT_ROOT / "results" / "figure_previews"
 
 
@@ -270,11 +270,78 @@ def make_policy_robustness_figure(did: pd.DataFrame, calendar_2024: pd.DataFrame
     save_figure(fig, "fig_policy_robustness")
 
 
+def make_synthetic_diagnostic_figure(paths: pd.DataFrame, placebo: pd.DataFrame, summary: pd.DataFrame) -> None:
+    specs = [
+        ("arr", "delay15_rate", "(a)ARR delay-15-plus pre-fit", "%", 100.0),
+        ("arr", "nas_delay_per_scheduled_op", "(b)ARR NAS pre-fit", "min/op", 1.0),
+        ("dep", "delay15_rate", "(c)DEP delay-15-plus placebo", "recovery gap (pp)", 100.0),
+        ("dep", "nas_delay_per_scheduled_op", "(d)DEP NAS placebo", "recovery gap (min/op)", 1.0),
+    ]
+    fig, axes = plt.subplots(2, 2, figsize=(7.2, 5.2))
+    pre_end = pd.Timestamp("2025-05-19")
+    for ax, (side, metric, title, ylabel, scale) in zip(axes.ravel()[:2], specs[:2]):
+        data = paths[(paths["side"] == side) & (paths["metric"] == metric) & (paths["FlightDate"] <= pre_end)].sort_values("FlightDate")
+        ax.plot(data["FlightDate"], data["observed"] * scale, color="#111827", linewidth=1.1, label="EWR")
+        ax.plot(data["FlightDate"], data["synthetic"] * scale, color="#2563EB", linewidth=1.1, linestyle="--", label="Synthetic EWR")
+        ax.axvspan(pd.Timestamp("2025-04-15"), pd.Timestamp("2025-05-19"), color="#B91C1C", alpha=0.07, linewidth=0)
+        row = summary[(summary["side"] == side) & (summary["metric"] == metric)].iloc[0]
+        rmspe = row["pre_rmse"] * scale
+        unit = "pp" if scale == 100.0 else "min/op"
+        ax.text(
+            0.02,
+            0.90,
+            f"Pre-RMSPE: {rmspe:.1f} {unit}",
+            transform=ax.transAxes,
+            fontsize=8,
+            bbox={"facecolor": "white", "edgecolor": "none", "alpha": 0.85, "pad": 1.5},
+        )
+        ax.set_title(title, loc="center")
+        ax.set_ylabel(ylabel)
+        ax.xaxis.set_major_locator(mdates.MonthLocator(interval=1))
+        ax.xaxis.set_major_formatter(mdates.DateFormatter("%b"))
+    for ax, (side, metric, title, xlabel, scale) in zip(axes.ravel()[2:], specs[2:]):
+        group = placebo[(placebo["side"] == side) & (placebo["metric"] == metric)].copy()
+        group["gap_scaled"] = group["recovery_gap"] * scale
+        ewr = group[group["treated_airport"] == "EWR"].iloc[0]
+        ax.hist(group["gap_scaled"], bins=16, color="#D1D5DB", edgecolor="white")
+        ewr_gap = ewr["gap_scaled"]
+        ax.axvline(ewr_gap, color="#2563EB", linewidth=1.6)
+        ax.text(
+            ewr_gap,
+            ax.get_ylim()[1] * 0.92,
+            f"EWR {ewr_gap:.1f}\nrank {int(ewr['rank_recovery_most_negative'])}/{int(ewr['airports'])}",
+            ha="left" if ewr_gap < group["gap_scaled"].median() else "right",
+            va="top",
+            fontsize=8,
+            color="#2563EB",
+            bbox={"facecolor": "white", "edgecolor": "none", "alpha": 0.85, "pad": 1.5},
+        )
+        ax.axvline(0, color="#111827", linewidth=0.8)
+        ax.set_title(title, loc="center")
+        ax.set_xlabel(xlabel)
+        ax.set_ylabel("donor airports")
+    fig.legend(
+        handles=[
+            Line2D([0], [0], color="#111827", lw=1.1, label="EWR"),
+            Line2D([0], [0], color="#2563EB", lw=1.1, linestyle="--", label="Synthetic EWR"),
+            Patch(facecolor="#B91C1C", alpha=0.10, label="Stress window"),
+            Line2D([0], [0], color="#2563EB", lw=1.6, label="EWR placebo rank"),
+        ],
+        ncol=4,
+        frameon=False,
+        loc="lower center",
+        bbox_to_anchor=(0.5, 0.03),
+    )
+    fig.tight_layout(rect=[0, 0.13, 1, 1])
+    save_figure(fig, "fig_synthetic_diagnostics")
+
+
 def write_manifest() -> None:
     files = [
         "fig_policy_timeline.pdf",
         "fig_ewr_daily_event.pdf",
         "fig_synthetic_reliability.pdf",
+        "fig_synthetic_diagnostics.pdf",
         "fig_access_exposure.pdf",
         "fig_policy_robustness.pdf",
     ]
@@ -297,6 +364,7 @@ def main() -> None:
     daily = pd.read_csv(RESULT_DIR / "airport_side_daily.csv", parse_dates=["FlightDate"])
     paths = pd.read_csv(TRA_DIR / "synthetic_control_paths.csv", parse_dates=["FlightDate"])
     synthetic = pd.read_csv(TRA_DIR / "synthetic_control_summary.csv")
+    placebo = pd.read_csv(TRA_DIR / "synthetic_control_placebos.csv")
     t100_summary = pd.read_csv(TRA_DIR / "t100_policy_exposure_summary.csv")
     carrier_summary = pd.read_csv(TRA_DIR / "t100_carrier_policy_summary.csv")
     externality = pd.read_csv(TRA_DIR / "delay_exposure_accounting.csv")
@@ -305,6 +373,7 @@ def main() -> None:
 
     make_daily_event_figure(daily)
     make_synthetic_figure(paths, synthetic)
+    make_synthetic_diagnostic_figure(paths, placebo, synthetic)
     make_access_exposure_figure(t100_summary, carrier_summary, externality)
     make_policy_robustness_figure(did, calendar_2024, synthetic)
     write_manifest()
