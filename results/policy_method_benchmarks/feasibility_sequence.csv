@@ -1,0 +1,5 @@
+phase,score,feasible,winner_probability,rank
+cap_34,0.7073727943584514,True,1.0,1
+extension_36,,False,0.0,2
+interim_28,,False,0.0,2
+stress,,False,0.0,2

@@ -1,0 +1,7 @@
+method_id,family,venue,year,doi,selected_phase,top_rank_set,unique_selection,selected_score
+risk_averse_fair,Risk-averse and fair allocation,Naval Research Logistics,2024,10.1002/nav.22217,cap_34,cap_34,True,0.7938311251581396
+znumber_network_dea,Efficiency with undesirable outputs and uncertainty,Socio-Economic Planning Sciences,2024,10.1016/j.seps.2024.102080,cap_34,cap_34,True,0.8530849469818143
+series_sbm_dea,Efficiency with undesirable outputs,Socio-Economic Planning Sciences,2025,10.1016/j.seps.2025.102211,non_unique,cap_34;interim_28;stress,False,1.0
+cocofiso,Multi-criteria compromise decision support,Expert Systems with Applications,2024,10.1016/j.eswa.2024.124079,cap_34,cap_34,True,2.023733295567121
+equity_efficiency_frontier,Equity-efficiency allocation,Socio-Economic Planning Sciences,2026,10.1016/j.seps.2026.102483,stress,stress,True,0.6010644572510181
+feasibility_sequence,Feasibility-constrained public decision support,Socio-Economic Planning Sciences,2026,10.1016/j.seps.2026.102568,cap_34,cap_34,True,0.7073727943584514

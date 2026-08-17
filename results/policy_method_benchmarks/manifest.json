@@ -1,0 +1,14 @@
+{
+  "smoke": false,
+  "seed": 20260817,
+  "methods": 6,
+  "input_rows": 4,
+  "outputs": [
+    "risk_averse_fair",
+    "znumber_network_dea",
+    "series_sbm_dea",
+    "cocofiso",
+    "equity_efficiency_frontier",
+    "feasibility_sequence"
+  ]
+}

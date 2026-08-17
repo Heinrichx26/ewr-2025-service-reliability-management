@@ -1,0 +1,8 @@
+method_id,selected_phase,top_rank_set,top_set_size,safe_share_in_top_set,unsafe_winner_probability,all_top_regimes_pass_balanced_bounds
+risk_averse_fair,cap_34,cap_34,1,1.0,0.2456,True
+znumber_network_dea,cap_34,cap_34,1,1.0,,True
+series_sbm_dea,non_unique,cap_34;interim_28;stress,3,0.3333333333333333,,False
+cocofiso,cap_34,cap_34,1,1.0,0.0804,True
+equity_efficiency_frontier,stress,stress,1,0.0,0.5445544554455446,False
+feasibility_sequence,cap_34,cap_34,1,1.0,0.0,True
+observed_regime_governance_rule,cap_34,cap_34,1,1.0,0.0,True

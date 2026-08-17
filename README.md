@@ -7,6 +7,7 @@ The submitted article, article PDF, LaTeX source, Word submission files, cover l
 ## Repository contents
 
 - `src/`: scripts for data processing, robustness checks, policy-exposure checks, transferability checks, synthetic-control analysis, and figure generation.
+- `src/policy_method_benchmarks/`: one independent implementation file for each 2024--2026 decision-method benchmark, plus a shared data interface.
 - `results/ewr_2025_full/`: airport-day-side panels and period summaries used for the main descriptive evidence.
 - `results/did_robustness/`: daily difference-in-differences estimates and weather-control sensitivity.
 - `results/control_set_sensitivity/`: control-airport sensitivity results.
@@ -24,6 +25,8 @@ The submitted article, article PDF, LaTeX source, Word submission files, cover l
 - `results/tra_atcscc_advisories/`: ATCSCC advisory diagnostics for flow-management pressure.
 - `results/tra_deep_policy_checks/`: dynamic event-study contrasts, severe-delay checks, weighted market retention, ridge counterfactuals, passenger-time bootstrap intervals, and carrier-group heterogeneity.
 - `results/operational_policy_mechanism/`: policy-mechanism bridge table linking capacity governance, peak-hour pressure, reliability, counterfactual checks, access, and carrier response.
+- `results/seps_policy_frontier/`: the common four-regime reliability, service, access, and burden matrix.
+- `results/policy_method_benchmarks/`: rankings, top-state audit, preference sensitivity, and implementation-fidelity records for six recent method families.
 - `results/figure_previews/`: PNG previews of the figures generated from the public-data results.
 - `data/raw_bts_2025/` and `data/raw_bts_2024/`: placeholder folders for public BTS ZIP files. Raw BTS files are not committed.
 - `data/t100_domestic_segment/`: placeholder folder for public BTS T-100 Domestic Segment ZIP files. Raw T-100 files are not committed.
@@ -106,6 +109,7 @@ python src/add_tra_asos_weather_controls.py
 python src/add_tra_atcscc_advisory_check.py
 python src/add_tra_t100_international_exposure.py
 python src/add_tra_deep_policy_checks.py --bootstrap-reps 2000
+python src/run_policy_method_benchmarks.py
 python src/make_figures.py
 ```
 
@@ -124,7 +128,21 @@ python src/add_tra_asos_weather_controls.py --smoke
 python src/add_tra_atcscc_advisory_check.py --smoke
 python src/add_tra_t100_international_exposure.py --smoke
 python src/add_tra_deep_policy_checks.py --smoke --bootstrap-reps 300
+python src/run_policy_method_benchmarks.py --smoke
 ```
+
+## Recent method-family benchmark
+
+The benchmark compares six decision mechanisms on the same four observed policy states:
+
+- fair risk-averse allocation based on Sun, Deng, Wei, and Xie (2024), `10.1002/nav.22217`;
+- Z-number network data envelopment analysis based on Yang, Omrani, and Imanirad (2024), `10.1016/j.seps.2024.102080`;
+- series-network slacks-based measurement based on Taleb (2025), `10.1016/j.seps.2025.102211`;
+- combined compromise for ideal solution based on Rasoanaivo et al. (2024), `10.1016/j.eswa.2024.124079`;
+- effectiveness-equity preference analysis based on Eisenhandler, Meyer, and Tzur (2026), `10.1016/j.seps.2026.102483`;
+- feasibility-constrained sequencing based on Do, Xia, and Pham (2026), `10.1016/j.seps.2026.102568`.
+
+Each implementation records the mathematical components retained, the airport-specific adaptation, and its decision output. Scores remain on their native method scales. The common audit compares the top state, uniqueness, compliance with the balanced policy bounds, and preference sensitivity. Run the smoke command before the full benchmark.
 
 ## Scope
 
