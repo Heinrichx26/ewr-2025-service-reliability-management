@@ -16,8 +16,8 @@ RESULT_DIR = PROJECT_ROOT / "results" / "ewr_2025_full"
 DID_DIR = PROJECT_ROOT / "results" / "did_robustness"
 CAL_PLACEBO_DIR = PROJECT_ROOT / "results" / "calendar_placebo_2024"
 TRA_DIR = PROJECT_ROOT / "results" / "tra_policy_experiments"
+FIGURE_DIR = PROJECT_ROOT / "article" / "elsarticle" / "figures"
 PREVIEW_DIR = PROJECT_ROOT / "results" / "figure_previews"
-FIGURE_DIR = PREVIEW_DIR
 
 
 PERIODS = [
@@ -204,12 +204,14 @@ def make_access_exposure_figure(t100_summary: pd.DataFrame, carrier_summary: pd.
         pos = x + (i - 0.5) * width
         ax.bar(pos, vals / 1000, width=width, color=colors[side], label=side_labels[side])
         for p, v in zip(pos, vals / 1000):
-            va = "top" if v < 0 else "bottom"
-            offset = -1.0 if v < 0 else 1.0
-            ax.text(p, v + offset, f"{v:.1f}", ha="center", va=va, fontsize=7.5)
+            if v < 0:
+                ax.text(p, v * 0.52, f"{v:.1f}", ha="center", va="center", fontsize=7.5, rotation=90, color="white")
+            else:
+                ax.text(p, v + 2.0, f"{v:.1f}", ha="center", va="bottom", fontsize=7.5)
     ax.axhline(0, color="#111827", linewidth=0.8)
     ax.set_xticks(x)
     ax.set_xticklabels(["United", "Other"])
+    ax.set_ylim(-145, 55)
     ax.set_ylabel("Seat change (thousand)")
     ax.set_title("(c)Carrier burden", loc="center")
 

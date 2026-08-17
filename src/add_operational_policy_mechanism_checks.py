@@ -151,9 +151,7 @@ def build_bridge(data: dict[str, pd.DataFrame]) -> pd.DataFrame:
             "layer": "Capacity governance",
             "operational_complication": "Scheduled access target",
             "evidence_bridge": (
-                f"BTS ops/day: ARR {bold(num(arr_ops_delta))}, DEP {bold(num(dep_ops_delta))}; "
-                f"DID: ARR {bold(num(did_coef(did, 'arr', 'scheduled_ops')))}, "
-                f"DEP {bold(num(did_coef(did, 'dep', 'scheduled_ops')))}."
+                f"BTS ops/day: ARR {bold(num(arr_ops_delta))}, DEP {bold(num(dep_ops_delta))}."
             ),
         },
         {
@@ -163,8 +161,7 @@ def build_bridge(data: dict[str, pd.DataFrame]) -> pd.DataFrame:
                 f"DEP p95 hourly scheduled ops falls {num(dep_hour_stress['p95_ops_per_hour'], 0)} to "
                 f"{bold(num(dep_hour_interim['p95_ops_per_hour'], 0))}; "
                 f"DEP hours above 28 fall {pct(dep_hour_stress['share_above_28'])} to "
-                f"{bold(pct(dep_hour_interim['share_above_28']))}. "
-                f"ARR p95 stays {num(arr_hour_stress['p95_ops_per_hour'], 0)} to {num(arr_hour_interim['p95_ops_per_hour'], 0)}."
+                f"{bold(pct(dep_hour_interim['share_above_28']))}."
             ),
         },
         {
@@ -172,18 +169,16 @@ def build_bridge(data: dict[str, pd.DataFrame]) -> pd.DataFrame:
             "operational_complication": "Realized service quality",
             "evidence_bridge": (
                 f"ARR NAS min/op falls {num(arr_nas_stress)} to {bold(num(arr_nas_interim))}; "
-                f"D15+ falls {pct(arr_d15_stress)} to {bold(pct(arr_d15_interim))}; "
-                f"cancellations fall {pct(arr_cancel_stress)} to {bold(pct(arr_cancel_interim))}."
+                f"D15+ falls {pct(arr_d15_stress)} to {bold(pct(arr_d15_interim))}."
             ),
         },
         {
             "layer": "Counterfactual credibility",
             "operational_complication": "Compound recovery setting",
             "evidence_bridge": (
-                f"No-weather ARR NAS DID is {bold(num(arr_nas_no_weather))}; "
                 f"SC ARR NAS gap is {bold(num(arr_sc['recovery_gap']))} with rank "
                 f"{bold(str(int(arr_sc_placebo['rank_recovery_most_negative'])) + '/' + str(int(arr_sc_placebo['airports'])))}; "
-                f"donor-exclusion gaps range {bold(num(excl_min))} to {bold(num(excl_max))}."
+                f"no-weather ARR NAS DID is {bold(num(arr_nas_no_weather))}."
             ),
         },
         {
@@ -192,8 +187,6 @@ def build_bridge(data: dict[str, pd.DataFrame]) -> pd.DataFrame:
             "evidence_bridge": (
                 f"Weekly market retention: ARR {bold(pct(route_retention(route, 'arr', 'weekly')))}, "
                 f"DEP {bold(pct(route_retention(route, 'dep', 'weekly')))}; "
-                f"T-100 seat retention: ARR {bold(pct(t100_value(t100, 'arr', 'seat_retention_apr_to_jun')))}, "
-                f"DEP {bold(pct(t100_value(t100, 'dep', 'seat_retention_apr_to_jun')))}; "
                 f"United ops/day: ARR {bold(num(carrier_delta(carrier, 'United', 'arr')))}, "
                 f"DEP {bold(num(carrier_delta(carrier, 'United', 'dep')))}."
             ),
