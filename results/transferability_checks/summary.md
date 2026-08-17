@@ -1,9 +1,9 @@
-﻿# Transferability checks
+# Transferability checks
 
 Months: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12.
 Benchmark airports: 50.
 
-## Management indicator benchmark
+## Policy indicator benchmark
 
 | side   | indicator               | ewr_value_text   | peer_median_text   | ewr_rank   | rank_direction       |
 |:-------|:------------------------|:-----------------|:-------------------|:-----------|:---------------------|

@@ -12,7 +12,7 @@ The submitted article, article PDF, LaTeX source, Word submission files, cover l
 - `results/control_set_sensitivity/`: control-airport sensitivity results.
 - `results/hourly_schedule_pressure/`: hourly scheduled-operation summaries used for the schedule-pressure figure.
 - `results/public_data_validation_checks/`: short-window checks, hourly upper-tail summaries, and OPSNET validation output.
-- `results/service_management_checks/`: service coverage, route retention, dominant-carrier response, and capacity-reliability trade-off outputs.
+- `results/access_carrier_checks/`: route retention, passenger-access, carrier-burden, and capacity-reliability trade-off outputs.
 - `results/identification_checks/`: short-window DID, event-time DID, multiple placebo, and airport-label permutation results.
 - `results/calendar_placebo_2024/`: same-calendar 2024 placebo results.
 - `results/transferability_checks/`: 50-airport benchmark outputs.
@@ -79,7 +79,7 @@ From the repository root:
 python src/analyze_ewr_2025_full.py --months 1 2 3 4 5 6 7 8 9 10 11 12
 python src/analyze_hourly_schedule_pressure.py --months 1 2 3 4 5 6 7 8 9 10 11 12
 python src/add_public_data_validation_checks.py --months 1 2 3 4 5 6 7 8 9 10 11 12 --fetch-opsnet
-python src/add_service_management_checks.py --months 1 2 3 4 5 6 7 8 9 10 11 12
+python src/add_access_carrier_checks.py --months 1 2 3 4 5 6 7 8 9 10 11 12
 python src/add_transferability_checks.py --months 1 2 3 4 5 6 7 8 9 10 11 12
 python src/add_identification_checks.py --months 1 2 3 4 5 6 7 8 9 10 11 12
 python src/run_did_robustness.py --boot 499 --seed 20260510

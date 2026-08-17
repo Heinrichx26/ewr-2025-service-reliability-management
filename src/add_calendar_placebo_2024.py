@@ -221,7 +221,7 @@ def write_latex_table(results_2024: pd.DataFrame, table_path: Path) -> None:
             r"\bottomrule",
             r"\end{tabular}",
             r"\vspace{2mm}",
-            r"\parbox{0.94\linewidth}{\footnotesize Notes: DID means difference-in-differences, ARR means arrivals, DEP means departures, and NAS means National Airspace System. The 2025 main DID compares April 15--May 19 with May 20--June 15, 2025. The 2024 placebo uses the same calendar days in 2024. Models use airport and day-of-week fixed effects; reliability outcomes include weather-delay minutes per scheduled operation. Bold values mark the 2025 management-signal direction.}",
+            r"\parbox{0.94\linewidth}{\footnotesize Notes: DID means difference-in-differences, ARR means arrivals, DEP means departures, and NAS means National Airspace System. The 2025 main DID compares April 15--May 19 with May 20--June 15, 2025. The 2024 placebo uses the same calendar days in 2024. Models use airport and day-of-week fixed effects; reliability outcomes include weather-delay minutes per scheduled operation. Bold values mark the main 2025 policy-signal direction.}",
             r"\end{table}",
         ]
     )

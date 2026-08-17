@@ -295,7 +295,7 @@ def write_latex_table(bench: pd.DataFrame, table_path: Path) -> None:
         r"\begin{table}[!htbp]",
         r"\centering",
         r"\footnotesize",
-        r"\caption{Large-airport benchmark for transferability and management interpretation}",
+        r"\caption{Large-airport benchmark for transferability and policy interpretation}",
         r"\label{tab:transferability-benchmark}",
         r"\begin{tabular}{@{}llrrr@{}}",
         r"\toprule",
@@ -328,7 +328,7 @@ def write_latex_table(bench: pd.DataFrame, table_path: Path) -> None:
             r"\bottomrule",
             r"\end{tabular}",
             r"\vspace{2mm}",
-            r"\parbox{0.94\linewidth}{\footnotesize Notes: The benchmark set is the 50 largest U.S. domestic airports by scheduled operations during April 15--May 19, 2025, EWR is included in this set. Peer median excludes EWR. Bold values mark the management indicators used in the interpretation.}",
+            r"\parbox{0.94\linewidth}{\footnotesize Notes: The benchmark set is the 50 largest U.S. domestic airports by scheduled operations during April 15--May 19, 2025, EWR is included in this set. Peer median excludes EWR. Bold values mark the policy indicators used in the interpretation.}",
             r"\end{table}",
         ]
     )
@@ -342,7 +342,7 @@ def write_summary(out_dir: Path, months: list[int], peers: list[str], bench: pd.
         f"Months: {', '.join(str(month) for month in months)}.",
         f"Benchmark airports: {len(peers)}.",
         "",
-        "## Management indicator benchmark",
+        "## Policy indicator benchmark",
         "",
         bench.assign(
             side=bench["side"].map(SIDE_LABELS),
@@ -378,7 +378,7 @@ def run(months: list[int], out_dir: Path, top_n: int, write_tables: bool) -> Non
     changes.to_csv(out_dir / "large_airport_stress_interim_changes.csv", index=False)
     dom.to_csv(out_dir / "dominant_carrier_share.csv", index=False)
     retention.to_csv(out_dir / "service_market_retention.csv", index=False)
-    benchmark.to_csv(out_dir / "management_indicator_benchmark.csv", index=False)
+    benchmark.to_csv(out_dir / "policy_indicator_benchmark.csv", index=False)
     (out_dir / "benchmark_airports.json").write_text(json.dumps(peers, indent=2), encoding="utf-8")
     write_summary(out_dir, months, peers, benchmark)
     if write_tables and TABLES.exists():

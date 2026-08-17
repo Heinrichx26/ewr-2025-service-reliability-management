@@ -11,7 +11,7 @@ import pandas as pd
 
 BASE = Path(__file__).resolve().parents[1]
 RAW = BASE / "data" / "raw_bts_2025"
-OUT = BASE / "results" / "service_management_checks"
+OUT = BASE / "results" / "access_carrier_checks"
 
 USECOLS = [
     "FlightDate",
@@ -388,7 +388,7 @@ def write_summary(
         return f"{100 * x:.1f}%"
 
     lines = [
-        "# Business and service-continuity checks",
+        "# Access and carrier-burden checks",
         "",
         f"Months: {', '.join(str(month) for month in months)}.",
         "Scope: EWR domestic scheduled flights in BTS On-Time Performance records.",
@@ -468,7 +468,7 @@ def build_outputs(months: list[int], out_dir: Path) -> None:
     top_carriers = top_carrier_contrast(records, days)
     tradeoff = capacity_reliability_tradeoff(records, days)
 
-    records.to_csv(out_dir / "ewr_bts_business_records.csv", index=False)
+    records.to_csv(out_dir / "ewr_bts_access_records.csv", index=False)
     days.to_csv(out_dir / "period_days.csv", index=False)
     routes.to_csv(out_dir / "route_period_summary.csv", index=False)
     coverage.to_csv(out_dir / "route_service_coverage_summary.csv", index=False)
