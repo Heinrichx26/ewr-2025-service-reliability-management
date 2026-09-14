@@ -1,0 +1,18 @@
+{
+  "usable": true,
+  "reason": "Stress-to-28/28 delay-waste CO2 cut exceeds 50 t/day, DID-implied cut exceeds 50 t/day, and 28/28 is the lowest-waste observed target.",
+  "stress_co2_t_day": 596.0651571428572,
+  "co2_28": 173.3581851851852,
+  "co2_34": 252.53846212121212,
+  "co2_36": 250.36927611940297,
+  "cut_stress_to_28_t_day": 422.70697195767195,
+  "lift_28_to_34_t_day": 79.18027693602693,
+  "diff_34_to_36_t_day": -2.1691860018091518,
+  "did_min_per_day": -10112.52603934936,
+  "did_fuel_t_day": -126.40657549186702,
+  "did_co2_t_day": -399.4447785542998,
+  "did_arr_min_per_op": -29.405276201753548,
+  "did_dep_min_per_op": -3.807163853637988,
+  "fuel_kg_per_min_primary": 12.5,
+  "co2_kg_per_kg_fuel": 3.16
+}

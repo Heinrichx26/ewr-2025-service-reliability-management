@@ -28,6 +28,7 @@ The submitted article, article PDF, LaTeX source, Word submission files, cover l
 - `results/seps_policy_frontier/`: the common four-regime reliability, service, access, and burden matrix.
 - `results/policy_method_benchmarks/`: rankings, top-state audit, preference sensitivity, and implementation-fidelity records for six recent method families.
 - `results/figure_previews/`: PNG previews of the figures generated from the public-data results.
+- `results/delay_waste_emissions_smoke/`: NAS delay-waste and extra-taxi fuel and CO2 by operating-limit state, converted with public ICAO idle/taxi factors.
 - `data/raw_bts_2025/` and `data/raw_bts_2024/`: placeholder folders for public BTS ZIP files. Raw BTS files are not committed.
 - `data/t100_domestic_segment/`: placeholder folder for public BTS T-100 Domestic Segment ZIP files. Raw T-100 files are not committed.
 - `data/t100_international_segment/`: placeholder folder for public BTS T-100 International Segment ZIP files. Raw T-100 files are not committed.
@@ -110,8 +111,11 @@ python src/add_tra_atcscc_advisory_check.py
 python src/add_tra_t100_international_exposure.py
 python src/add_tra_deep_policy_checks.py --bootstrap-reps 2000
 python src/run_policy_method_benchmarks.py
+python src/smoke_test_delay_waste_emissions.py
 python src/make_figures.py
 ```
+
+The delay-waste conversion reads BTS taxi and NAS-delay minutes and the derived airport-day panel in `results/ewr_2025_full/`. It writes fuel and CO2 tables to `results/delay_waste_emissions_smoke/` using a 12.5 kg/min idle/taxi fleet mix (bounds 8--16 kg/min) and 3.16 kg CO2/kg jet A. Raw monthly BTS ZIP files in `data/raw_bts_2025/` are required to rebuild extra taxi from flight-level records; the committed `results/delay_waste_emissions_smoke/` files can be inspected without that rebuild.
 
 ## Quick smoke checks
 
@@ -129,6 +133,7 @@ python src/add_tra_atcscc_advisory_check.py --smoke
 python src/add_tra_t100_international_exposure.py --smoke
 python src/add_tra_deep_policy_checks.py --smoke --bootstrap-reps 300
 python src/run_policy_method_benchmarks.py --smoke
+python src/smoke_test_delay_waste_emissions.py
 ```
 
 ## Recent method-family benchmark
